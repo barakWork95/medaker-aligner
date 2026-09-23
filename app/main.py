@@ -8,7 +8,7 @@ import time
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-from .aligner import ENGINE_ID, get_aligner
+from .aligner import CALIBRATED, ENGINE_ID, THRESHOLDS, get_aligner
 from .audio import AudioDecodeError, decode_base64_audio
 from .contract import AlignRequest, AlignResponse
 
@@ -32,7 +32,7 @@ def _warm() -> None:
 
 @app.get("/health")
 def health() -> dict:
-    return {"ok": True, "engine": ENGINE_ID, "modelLoaded": get_aligner()._model is not None}
+    return {"ok": True, "engine": ENGINE_ID, "modelLoaded": get_aligner()._model is not None, "calibrated": CALIBRATED, "thresholds": THRESHOLDS}
 
 
 @app.post("/api/align", response_model=AlignResponse)

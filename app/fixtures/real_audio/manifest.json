@@ -1,0 +1,15 @@
+{
+  "_readme": [
+    "Drop recordings here (.wav .m4a .mp3 .webm .ogg .flac) and run: python scripts/calibrate_fixtures.py",
+    "Filename convention infers the verse: <book>_<chapter>_<verse>_<anything>.<ext>, e.g. genesis_1_1_reader1.wav, i_samuel_3_2_dan.m4a",
+    "Entries below are OPTIONAL overrides per file: ref, text (pointed), reader, notes, omittedWords (indices the reader skipped), issues (expected Temani deviations per word index), skip.",
+    "Missing verse text is fetched from Sefaria (WLC); missing Temani expectations are generated from the frontend (../medaker) and cached in app/fixtures/expected/."
+  ],
+  "files": {
+    "genesis_1_1_reader1.wav": {
+      "ref": "Genesis 1:1",
+      "reader": "reader1",
+      "notes": "example entry — the file itself is not committed"
+    }
+  }
+}

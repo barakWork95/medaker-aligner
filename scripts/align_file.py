@@ -2,9 +2,11 @@
 Align a recording against a verse and print the /api/align response.
 
     python scripts/align_file.py samples/genesis-1-1.wav samples/genesis-1-1.expected.json
+    python scripts/align_file.py rec.m4a --ref "Genesis 1:3"            # text from Sefaria, expectations from the frontend
+    python scripts/align_file.py app/fixtures/real_audio/genesis_1_1_reader1.wav   # verse inferred from the filename
     python scripts/align_file.py my.webm expected.json --server http://localhost:8000   # via HTTP
 
-expected.json comes from the frontend:
+Explicit expected.json comes from the frontend:
     cd ../medaker && npx vite-node --config vitest.config.mts scripts/export-expected.ts "<pointed verse>" > expected.json
 """
 from __future__ import annotations
@@ -23,12 +25,22 @@ sys.path.insert(0, str(ROOT))
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("audio")
-    ap.add_argument("expected")
+    ap.add_argument("expected", nargs="?", help="expected.json; omit to resolve from --ref or the filename")
+    ap.add_argument("--ref", help='verse reference, e.g. "Genesis 1:1" (text fetched from Sefaria, expectations from the frontend)')
     ap.add_argument("--server", help="POST to a running server instead of aligning in-process")
     args = ap.parse_args()
     data = Path(args.audio).read_bytes()
     mime = mimetypes.guess_type(args.audio)[0] or "audio/wav"
-    expected = json.loads(Path(args.expected).read_text(encoding="utf-8"))
+    if args.expected:
+        expected = json.loads(Path(args.expected).read_text(encoding="utf-8"))
+    else:
+        from app.fixtures.registry import ref_from_filename, resolve_expected
+
+        ref = args.ref or ref_from_filename(Path(args.audio).name)
+        if not ref:
+            ap.error("give expected.json, --ref, or name the file <book>_<chapter>_<verse>_*.ext")
+        _, expected = resolve_expected(ref, None)
+        print(f"# {ref}: {len(expected)} words", file=sys.stderr)
     body = {
         "contractVersion": 1,
         "tradition": "temani",

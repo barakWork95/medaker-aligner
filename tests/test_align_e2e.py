@@ -5,6 +5,7 @@ response schema, monotonic non-overlapping timestamps and that every word is pla
 posterior scores are meaningless on tones. Drop a real recording as samples/genesis-1-1.wav
 to see real scores (see README).
 """
+import json
 from pathlib import Path
 
 import numpy as np
@@ -74,3 +75,33 @@ def test_http_endpoint(genesis_1_1_expected):
         assert data["engine"] == "mms-fa-torchaudio"
         assert len(data["words"]) == 7
         assert client.get("/health").json()["ok"] is True
+
+
+@requires_model
+def test_calibration_pipeline_on_a_dropped_file(tmp_path, monkeypatch):
+    """Drop a file named by verse into a folder → evaluate() infers, aligns and reports; calibrate() tunes."""
+    import shutil
+
+    from app.calibration import calibrate
+    from scripts.calibrate_fixtures import evaluate
+
+    wave, sr = _load_or_make_sample()
+    folder = tmp_path / "real_audio"
+    folder.mkdir()
+    shutil.copy(SAMPLES / "genesis-1-1.wav", folder / "genesis_1_1_test.wav")
+    # expectations: reuse the committed sample fixture as the cache so no frontend/network is needed
+    import app.fixtures.registry as reg
+
+    cache_dir = tmp_path / "expected"
+    cache_dir.mkdir()
+    fixture = json.loads((SAMPLES / "genesis-1-1.expected.json").read_text(encoding="utf-8"))
+    (cache_dir / "Genesis.1.1.json").write_text(json.dumps({"ref": "Genesis 1:1", "text": " ".join(w["pointed"] for w in fixture), "expected": fixture}), encoding="utf-8")
+    monkeypatch.setattr(reg, "expected_cache_path", lambda ref: cache_dir / (ref.replace(" ", "_").replace(":", ".") + ".json"))
+
+    word_stats, contrast_stats, report = evaluate(folder)
+    assert len(report) == 1 and report[0]["ref"] == "Genesis 1:1" and report[0]["placed"] == 7
+    assert len(word_stats) == 7 and all(w.spoken for w in word_stats)
+    assert any(c.kind == "pair" for c in contrast_stats) and any(c.kind == "marker" for c in contrast_stats)
+    result = calibrate(word_stats, contrast_stats)
+    assert set(result.thresholds) >= {"MIN_WORD_POSTERIOR", "CONTRAST_MARGIN", "MARKER_MIN"}
+    assert any("real speech" in w for w in result.warnings)  # synthetic tones → low-confidence guard fires

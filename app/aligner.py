@@ -20,7 +20,9 @@ from typing import Optional
 
 import numpy as np
 
+from .calibration import DEFAULT_THRESHOLDS, load_calibration
 from .contract import AlignWord, ExpectedWord, Phone, Phonetic, SyllableSpan
+from .fixtures.registry import CALIBRATION_FILE
 from .temani_adapter import CONTRASTS, PhoneRef, Token, tokenize_expected
 
 ENGINE_ID = "mms-fa-torchaudio"
@@ -31,14 +33,18 @@ ENGINE_ID = "mms-fa-torchaudio"
 # MIN_WORD_POSTERIOR AND below OMIT_RELATIVE × the median word posterior of the utterance.
 # The relative clause keeps a uniformly low-confidence recording (noise, non-speech, unusual
 # voice) from being emptied out — it gets a warning instead.
-MIN_WORD_S = 0.05
-SQUEEZED_S = 0.15
-MIN_WORD_POSTERIOR = 0.15
-OMIT_RELATIVE = 0.4
-LOW_CONFIDENCE_MEDIAN = 0.1
+# Values come from app/fixtures/calibration.json when `python scripts/calibrate_fixtures.py`
+# has been run on real recordings; otherwise the defaults in app/calibration.py.
+THRESHOLDS: dict[str, float] = load_calibration(CALIBRATION_FILE)
+MIN_WORD_S = THRESHOLDS["MIN_WORD_S"]
+SQUEEZED_S = THRESHOLDS["SQUEEZED_S"]
+MIN_WORD_POSTERIOR = THRESHOLDS["MIN_WORD_POSTERIOR"]
+OMIT_RELATIVE = THRESHOLDS["OMIT_RELATIVE"]
+LOW_CONFIDENCE_MEDIAN = THRESHOLDS["LOW_CONFIDENCE_MEDIAN"]
 # contrast checks: the competing letter must win by this much (mean posterior) to raise an issue
-CONTRAST_MARGIN = 0.15
-MARKER_MIN = 0.12
+CONTRAST_MARGIN = THRESHOLDS["CONTRAST_MARGIN"]
+MARKER_MIN = THRESHOLDS["MARKER_MIN"]
+CALIBRATED = THRESHOLDS != DEFAULT_THRESHOLDS
 
 
 @dataclass
@@ -176,6 +182,52 @@ class MMSAligner:
                 )
             )
         return words_out, warnings
+
+    def raw_stats(self, waveform: np.ndarray, sr: int, expected: list[ExpectedWord]) -> dict:
+        """
+        Ungated per-word and per-contrast statistics for calibration: word durations and
+        posteriors, and for every phone with a Temani contrast the expected vs. contrast
+        posteriors over its aligned frames.
+        """
+        self.load()
+        torch = self._torch
+        F = self._torchaudio.functional
+        words_tokens, _ = tokenize_expected(expected)
+        flat: list[Token] = [t for toks in words_tokens for t in toks if t.letter in self._dictionary]
+        wave = torch.from_numpy(np.ascontiguousarray(waveform, dtype=np.float32)).unsqueeze(0).to(self.device)
+        with torch.inference_mode():
+            emission, _ = self._model(wave)
+        emission = torch.log_softmax(emission, dim=-1)[0].cpu()
+        targets = torch.tensor([[self._dictionary[t.letter] for t in flat]], dtype=torch.int32)
+        if not flat or targets.size(1) > emission.size(0):
+            return {"words": [], "contrasts": []}
+        aligned, scores = F.forced_align(emission.unsqueeze(0), targets, blank=0)
+        spans = F.merge_tokens(aligned[0], scores[0].exp())
+        ratio = waveform.shape[0] / emission.size(0) / sr
+        probs = emission.exp().numpy()
+        words: list[dict] = []
+        contrasts: list[dict] = []
+        for w in expected:
+            mine = [(s, t) for s, t in zip(spans, flat) if t.word == w.index]
+            if not mine:
+                continue
+            words.append({"word": w.index, "duration": (mine[-1][0].end - mine[0][0].start) * ratio, "posterior": float(np.mean([s.score for s, _ in mine]))})
+            by_phone: dict[int, list] = {}
+            for s, t in mine:
+                by_phone.setdefault(t.phone_index, []).append((s, t))
+            for group in by_phone.values():
+                ipa = group[0][1].ipa
+                spec = CONTRASTS.get(ipa)
+                if not spec:
+                    continue
+                kind, e_letter, c_letter, _ = spec
+                a, b = group[0][0].start, group[-1][0].end
+                seg = probs[a:b]
+                e, c = self._dictionary.get(e_letter), self._dictionary.get(c_letter)
+                if e is None or c is None or b <= a:
+                    continue
+                contrasts.append({"word": w.index, "ipa": ipa, "kind": kind, "expected": float(seg[:, e].max() if kind == "marker" else seg[:, e].mean()), "contrast": float(seg[:, c].mean())})
+        return {"words": words, "contrasts": contrasts}
 
     # ---- helpers ----
     @staticmethod
