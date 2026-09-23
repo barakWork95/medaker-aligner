@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+.torch/
+samples/*.wav
+!samples/README.md
+.pytest_cache/

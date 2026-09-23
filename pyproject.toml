@@ -1,0 +1,8 @@
+[project]
+name = "medaker-aligner"
+version = "0.1.0"
+description = "Forced-alignment server for Medaker (POST /api/align, contract v1) — Temani Hebrew reading assessment"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

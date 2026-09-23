@@ -1,0 +1,9 @@
+# Pinned to a torch/torchaudio pair that ships torchaudio.pipelines.MMS_FA and
+# torchaudio.functional.forced_align (both are present through 2.5.x).
+torch==2.5.1
+torchaudio==2.5.1
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+numpy>=1.26,<3
+soundfile==0.13.1
