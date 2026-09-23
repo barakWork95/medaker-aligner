@@ -1,6 +1,7 @@
 """FastAPI app — POST /api/align (contract v1), GET /health."""
 from __future__ import annotations
 
+import gc
 import logging
 import os
 import time
@@ -9,6 +10,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from .aligner import CALIBRATED, ENGINE_ID, THRESHOLDS, get_aligner
+from .model_io import peak_rss_mb
 from .audio import AudioDecodeError, decode_base64_audio
 from .contract import AlignRequest, AlignResponse
 
@@ -32,7 +34,8 @@ def _warm() -> None:
 
 @app.get("/health")
 def health() -> dict:
-    return {"ok": True, "engine": ENGINE_ID, "modelLoaded": get_aligner()._model is not None, "calibrated": CALIBRATED, "thresholds": THRESHOLDS}
+    a = get_aligner()
+    return {"ok": True, "engine": ENGINE_ID, "modelLoaded": a._model is not None, "modelVariant": a.variant, "peakRssMb": peak_rss_mb(), "calibrated": CALIBRATED, "thresholds": THRESHOLDS}
 
 
 @app.post("/api/align", response_model=AlignResponse)
@@ -44,6 +47,11 @@ def align(req: AlignRequest) -> AlignResponse:
         raise HTTPException(status_code=400, detail=str(e)) from e
     if wave.size < sr // 10:
         raise HTTPException(status_code=400, detail="audio shorter than 100 ms")
-    words, warnings = get_aligner().align(wave, sr, req.expected)
-    log.info("aligned %s (%d words, %.1fs audio) in %.2fs", req.verse.ref, len(req.expected), wave.size / sr, time.time() - t0)
+    seconds = wave.size / sr
+    try:
+        words, warnings = get_aligner().align(wave, sr, req.expected)
+    finally:
+        del wave  # release the PCM buffer before the response is serialised
+        gc.collect()
+    log.info("aligned %s (%d words, %.1fs audio) in %.2fs", req.verse.ref, len(req.expected), seconds, time.time() - t0)
     return AlignResponse(engine=ENGINE_ID, words=words, warnings=warnings)

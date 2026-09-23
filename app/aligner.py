@@ -14,7 +14,9 @@ The model is loaded lazily on first use (~1.2 GB download into the torch hub cac
 """
 from __future__ import annotations
 
+import gc
 import math
+import os
 from dataclasses import dataclass
 from typing import Optional
 
@@ -23,9 +25,15 @@ import numpy as np
 from .calibration import DEFAULT_THRESHOLDS, load_calibration
 from .contract import AlignWord, ExpectedWord, Phone, Phonetic, SyllableSpan
 from .fixtures.registry import CALIBRATION_FILE
+from .model_io import load_model
 from .temani_adapter import CONTRASTS, PhoneRef, Token, tokenize_expected
 
 ENGINE_ID = "mms-fa-torchaudio"
+
+# Emission is computed in chunks so activation memory is bounded regardless of clip length
+# (a 20 s clip in one pass needs ~0.5 GB of transient activations; 6 s chunks need ~0.15 GB).
+CHUNK_S = float(os.environ.get("MMS_CHUNK_S", "6"))
+OVERLAP_S = 0.5
 
 # Omission rule (forced alignment always places every word; an unspoken word gets squeezed into
 # a sliver of low-confidence frames): a word is reported as not found when its span is shorter
@@ -62,6 +70,7 @@ class MMSAligner:
         self._model = None
         self._tokenizer = None
         self._dictionary: dict[str, int] = {}
+        self.variant: Optional[str] = None
 
     # ---- model ----
     def load(self) -> None:
@@ -71,10 +80,44 @@ class MMSAligner:
         import torchaudio
 
         self._bundle = torchaudio.pipelines.MMS_FA
-        self._model = self._bundle.get_model(with_star=False).to(self.device).eval()
+        self._model, self.variant = load_model(prefer_int8=os.environ.get("MMS_FA_PREFER_INT8", "1") == "1")
         self._dictionary = self._bundle.get_dict(star=None)
         self._torch = torch
         self._torchaudio = torchaudio
+        gc.collect()
+
+    def emission(self, waveform: np.ndarray, sr: int):
+        """
+        Log-softmax emission (frames × vocab) computed in overlapping chunks and stitched:
+        the model's receptive field is far shorter than the overlap, so frames away from a
+        chunk edge are identical to a single-pass result. Returns a CPU tensor.
+        """
+        torch = self._torch
+        hop = 320  # MMS frame = 20 ms @ 16 kHz
+        n = waveform.shape[0]
+        chunk = int(CHUNK_S * sr)
+        overlap = int(OVERLAP_S * sr)
+        if n <= chunk + overlap:
+            wave = torch.from_numpy(np.ascontiguousarray(waveform, dtype=np.float32)).unsqueeze(0)
+            with torch.inference_mode():
+                em, _ = self._model(wave)
+            return em[0].cpu()
+        pieces = []
+        start = 0
+        while start < n:
+            a = max(0, start - overlap)
+            b = min(n, start + chunk + overlap)
+            wave = torch.from_numpy(np.ascontiguousarray(waveform[a:b], dtype=np.float32)).unsqueeze(0)
+            with torch.inference_mode():
+                em, _ = self._model(wave)
+            em = em[0].cpu()
+            lead = (start - a) // hop  # frames belonging to the left overlap
+            keep = min(em.size(0) - lead, (min(n, start + chunk) - start) // hop + (1 if start + chunk >= n else 0))
+            pieces.append(em[lead : lead + keep].clone())
+            del em, wave
+            start += chunk
+        gc.collect()
+        return torch.cat(pieces, dim=0)
 
     @property
     def sample_rate(self) -> int:
@@ -102,10 +145,7 @@ class MMSAligner:
         if not flat:
             return [self._not_found(w) for w in expected], warnings + ["no alignable tokens"]
 
-        wave = torch.from_numpy(np.ascontiguousarray(waveform, dtype=np.float32)).unsqueeze(0).to(self.device)
-        with torch.inference_mode():
-            emission, _ = self._model(wave)
-        emission = torch.log_softmax(emission, dim=-1)[0].cpu()  # (frames, vocab)
+        emission = self.emission(waveform, sr)  # already log-softmax (frames, vocab)
         targets = torch.tensor([[self._dictionary[ch] for ch in letters]], dtype=torch.int32)
         n_frames = emission.size(0)
         if targets.size(1) > n_frames:
@@ -181,6 +221,8 @@ class MMSAligner:
                     phonetic=Phonetic(score=round(score, 3), issues=issues),
                 )
             )
+        del emission, emission_np, aligned, scores, token_spans, char_spans
+        gc.collect()
         return words_out, warnings
 
     def raw_stats(self, waveform: np.ndarray, sr: int, expected: list[ExpectedWord]) -> dict:
@@ -194,10 +236,7 @@ class MMSAligner:
         F = self._torchaudio.functional
         words_tokens, _ = tokenize_expected(expected)
         flat: list[Token] = [t for toks in words_tokens for t in toks if t.letter in self._dictionary]
-        wave = torch.from_numpy(np.ascontiguousarray(waveform, dtype=np.float32)).unsqueeze(0).to(self.device)
-        with torch.inference_mode():
-            emission, _ = self._model(wave)
-        emission = torch.log_softmax(emission, dim=-1)[0].cpu()
+        emission = self.emission(waveform, sr)
         targets = torch.tensor([[self._dictionary[t.letter] for t in flat]], dtype=torch.int32)
         if not flat or targets.size(1) > emission.size(0):
             return {"words": [], "contrasts": []}

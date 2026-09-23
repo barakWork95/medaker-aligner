@@ -123,12 +123,62 @@ tones, noise), the script refuses to write `calibration.json` (use `--force` to 
 `--dry-run` prints without writing. `python scripts/align_file.py <file> --ref "Genesis 1:3"`
 (or a verse-named file with no second argument) aligns one recording the same way.
 
+## Memory (read this before choosing a host)
+
+MMS_FA is a 315 M-parameter wav2vec2 model. What the server does about it
+(`app/model_io.py`, `app/aligner.py`, `main.py`):
+
+- **int8 dynamic quantisation of every Linear layer, done once** (`convert_to_int8`, at Docker
+  build time or on a big machine) and saved as a 338 MB state dict. The float32 bundle is never
+  built at runtime.
+- **Streaming loader**: the module tree is created on the meta device (no float32 weights),
+  each Linear gets a placeholder int8 layer, and the packed weights are set one layer at a time
+  straight from the memory-mapped artifact — no second copy ever exists.
+- **Chunked inference** (`MMS_CHUNK_S`, 6 s chunks with 0.5 s overlap, stitched at frame level)
+  bounds activation memory regardless of clip length; tensors are freed and `gc.collect()`ed after
+  every request.
+- **One uvicorn worker**, one torch thread (`TORCH_THREADS=1`), `MALLOC_ARENA_MAX=2`, small
+  concurrency limit — a second worker would double everything.
+
+Measured (`/proc` RSS; x86 numbers from an amd64 container, `torch 2.5.1+cpu`, fbgemm/x86 engine):
+
+| Stage | float32 bundle (before) | int8 streaming (now), x86 Linux | int8, macOS (qnnpack) |
+|---|---|---|---|
+| after `import torch` | 164 MB | 255 MB (181 anon) | 164 MB |
+| model loaded | 1 905 MB, **peak 2 581 MB** | 995 MB, peak 995 MB — **569 MB anonymous** + 425 MB file-backed (mmap) | 318 MB |
+| after a 6 s request | — | 1 094 MB (650 anon), peak 1 144 MB | 1 221 MB* |
+| after a 12–20 s request | — | 1 140 MB (697 anon), peak 1 278 MB | 1 494 MB* |
+
+\* qnnpack keeps dequantised float32 copies of the weights after the first forward; that is a
+macOS-only artefact (dev machines), fbgemm on Linux does true int8 GEMM.
+
+**Verdict for a 512 MB instance:** not achievable with this model. The packed int8 weights alone
+are ≈ 315 MB and torch's runtime ≈ 180 MB before any request; under a real 512 MB cgroup the
+process is OOM-killed while loading (reproduced with `docker run --memory=512m`). The changes
+above cut the load peak by ~60 % and steady state by ~45 %, which makes **1 GB instances viable
+and 2 GB comfortable**, but no loading trick shrinks 315 M parameters below the limit. Options:
+
+1. **Hugging Face Spaces (Docker Space, free CPU basic: 2 vCPU / 16 GB RAM)** — the best free
+   fit; push this repo as a Space, set `ALLOWED_ORIGINS`, use the Space URL as
+   `ALIGNMENT_API_URL`.
+2. **Google Cloud Run** with 2 GiB memory and min-instances 0 — pay-per-request, effectively free
+   at this traffic; cold start ≈ 5 s with the int8 image.
+3. **Render Standard (2 GB)** — the same image works unchanged.
+4. A smaller aligner model (e.g. a ~95 M-parameter wav2vec2 with a character CTC head fine-tuned
+   for romanised Hebrew) would fit 512 MB with these same loading tricks, but such a model would
+   have to be trained; MMS is the only off-the-shelf multilingual character aligner.
+
+Env knobs: `MMS_FA_PREFER_INT8` (1), `MMS_FA_INT8` (artifact path), `MMS_FA_INT8_URL` (download a
+prebuilt artifact on first start — e.g. a GitHub release asset; MMS is CC-BY-NC 4.0, keep the
+attribution), `MMS_FA_INT8_REQUIRED=1` (convert on first start; needs ≈ 3 GB), `MMS_CHUNK_S`,
+`TORCH_THREADS`, `UVICORN_LIMIT_CONCURRENCY`. `/health` reports `modelVariant` and `peakRssMb`.
+
 ## Docker
 
 ```bash
-docker build -t medaker-aligner .                    # bakes the 1.2 GB model into the image
-docker build --build-arg PRELOAD=0 -t medaker-aligner .   # or download on first start
-docker run -p 8000:8000 -e ALLOWED_ORIGINS=https://barakwork95.github.io medaker-aligner
+docker build -t medaker-aligner .                    # converts + bakes the 338 MB int8 model (build needs ≈ 3 GB RAM)
+docker build --build-arg PRELOAD=0 -t medaker-aligner .   # no model in the image → MMS_FA_INT8_URL or MMS_FA_INT8_REQUIRED=1 at runtime
+docker run -p 8000:8000 --memory=1g -e ALLOWED_ORIGINS=https://barakwork95.github.io medaker-aligner
 ```
 
 ## How the response is produced
