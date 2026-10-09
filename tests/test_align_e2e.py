@@ -101,7 +101,8 @@ def test_calibration_pipeline_on_a_dropped_file(tmp_path, monkeypatch):
     word_stats, contrast_stats, report = evaluate(folder)
     assert len(report) == 1 and report[0]["ref"] == "Genesis 1:1" and report[0]["placed"] == 7
     assert len(word_stats) == 7 and all(w.spoken for w in word_stats)
-    assert any(c.kind == "pair" for c in contrast_stats) and any(c.kind == "marker" for c in contrast_stats)
+    assert any(c.kind == "pair" for c in contrast_stats)
+    assert not any(c.kind == "marker" for c in contrast_stats)  # marker checks are off by default
     result = calibrate(word_stats, contrast_stats)
     assert set(result.thresholds) >= {"MIN_WORD_POSTERIOR", "CONTRAST_MARGIN", "MARKER_MIN"}
     assert any("real speech" in w for w in result.warnings)  # synthetic tones → low-confidence guard fires
