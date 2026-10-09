@@ -1,0 +1,295 @@
+{
+  "ref": "Genesis 1:18",
+  "text": "וְלִמְשֹׁל֙ בַּיּ֣וֹם וּבַלַּ֔יְלָה וּֽלֲהַבְדִּ֔יל בֵּ֥ין הָא֖וֹר וּבֵ֣ין הַחֹ֑שֶׁךְ וַיַּ֥רְא אֱלֹהִ֖ים כִּי־טֽוֹב׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ולמשל",
+      "pointed": "וְלִמְשֹׁל֙",
+      "ipa": "wə.lim.ʃøl",
+      "roman": "wəlimˈšöl",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lim",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʃøl",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "ביום",
+      "pointed": "בַּיּ֣וֹם",
+      "ipa": "ba.jjøm",
+      "roman": "ˈbayyöm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ba",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "jjøm",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 2,
+      "display": "ובלילה",
+      "pointed": "וּבַלַּ֔יְלָה",
+      "ipa": "u.va.llaj.lɔ",
+      "roman": "uvaˈllaylå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "va",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "llaj",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "lɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "ולהבדיל",
+      "pointed": "וּֽלֲהַבְדִּ֔יל",
+      "ipa": "u.la.hav.dil",
+      "roman": "ulahavˈdil",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "la",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "hav",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "dil",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "בין",
+      "pointed": "בֵּ֥ין",
+      "ipa": "ben",
+      "roman": "ˈben",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ben",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 5,
+      "display": "האור",
+      "pointed": "הָא֖וֹר",
+      "ipa": "hɔ.ør",
+      "roman": "ˈhåör",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "hɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ør",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "ובין",
+      "pointed": "וּבֵ֣ין",
+      "ipa": "u.ven",
+      "roman": "uˈven",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ven",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 7,
+      "display": "החשך",
+      "pointed": "הַחֹ֑שֶׁךְ",
+      "ipa": "ha.ħø.ʃax",
+      "roman": "haˈḥöšaḵ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ħø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ʃax",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 8,
+      "display": "וירא",
+      "pointed": "וַיַּ֥רְא",
+      "ipa": "wa.jjar",
+      "roman": "waˈyyar",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jjar",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 9,
+      "display": "אלהים",
+      "pointed": "אֱלֹהִ֖ים",
+      "ipa": "ʔa.lø.him",
+      "roman": "ʾalöˈhim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "him",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 10,
+      "display": "כי טוב",
+      "pointed": "כִּי־טֽוֹב׃",
+      "ipa": "ki tˤøv",
+      "roman": "ˈki-ˈṭöv",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ki",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "tˤøv",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

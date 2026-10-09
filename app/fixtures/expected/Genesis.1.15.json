@@ -1,0 +1,227 @@
+{
+  "ref": "Genesis 1:15",
+  "text": "וְהָי֤וּ לִמְאוֹרֹת֙ בִּרְקִ֣יעַ הַשָּׁמַ֔יִם לְהָאִ֖יר עַל־הָאָ֑רֶץ וַֽיְהִי־כֵֽן׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "והיו",
+      "pointed": "וְהָי֤וּ",
+      "ipa": "wə.hɔ.ju",
+      "roman": "wəˈhåyu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ju",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "למאורת",
+      "pointed": "לִמְאוֹרֹת֙",
+      "ipa": "lim.ø.røθ",
+      "roman": "limöˈröṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "lim",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "røθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "ברקיע",
+      "pointed": "בִּרְקִ֣יעַ",
+      "ipa": "bir.gi.aʕ",
+      "roman": "birˈgiaʿ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "bir",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "gi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "aʕ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 3,
+      "display": "השמים",
+      "pointed": "הַשָּׁמַ֔יִם",
+      "ipa": "ha.ʃʃɔ.ma.jim",
+      "roman": "haššåˈmayim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʃʃɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ma",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "jim",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "להאיר",
+      "pointed": "לְהָאִ֖יר",
+      "ipa": "lə.hɔ.ʔir",
+      "roman": "ləhåˈʾir",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "lə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔir",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "על הארץ",
+      "pointed": "עַל־הָאָ֑רֶץ",
+      "ipa": "ʕal hɔ.ʔɔ.rasˤ",
+      "roman": "ˈʿal-håˈʾåraṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʕal",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "rasˤ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "ויהי כן",
+      "pointed": "וַֽיְהִי־כֵֽן׃",
+      "ipa": "wa.jə.hi xen",
+      "roman": "wayəˈhi-ˈḵen",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "hi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "xen",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

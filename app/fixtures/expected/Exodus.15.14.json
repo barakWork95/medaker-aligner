@@ -1,0 +1,179 @@
+{
+  "ref": "Exodus 15:14",
+  "text": "שָֽׁמְע֥וּ עַמִּ֖ים יִרְגָּז֑וּן חִ֣יל אָחַ֔ז יֹשְׁבֵ֖י פְּלָֽשֶׁת׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "שמעו",
+      "pointed": "שָֽׁמְע֥וּ",
+      "ipa": "ʃɔ.mə.ʕu",
+      "roman": "šåˈməʿu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʃɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mə",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ʕu",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "עמים",
+      "pointed": "עַמִּ֖ים",
+      "ipa": "ʕa.mmim",
+      "roman": "ʿaˈmmim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʕa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mmim",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "ירגזון",
+      "pointed": "יִרְגָּז֑וּן",
+      "ipa": "jir.dʒɔ.zun",
+      "roman": "yirˈǧåzun",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jir",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "dʒɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "zun",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "חיל",
+      "pointed": "חִ֣יל",
+      "ipa": "ħil",
+      "roman": "ˈḥil",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ħil",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 4,
+      "display": "אחז",
+      "pointed": "אָחַ֔ז",
+      "ipa": "ʔɔ.ħaz",
+      "roman": "ʾåˈḥaz",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ħaz",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "ישבי",
+      "pointed": "יֹשְׁבֵ֖י",
+      "ipa": "jøʃ.ve",
+      "roman": "yöšˈve",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jøʃ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ve",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "פלשת",
+      "pointed": "פְּלָֽשֶׁת׃",
+      "ipa": "pə.lɔ.ʃaθ",
+      "roman": "pəlåˈšaṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "pə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʃaθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

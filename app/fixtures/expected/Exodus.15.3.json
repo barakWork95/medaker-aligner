@@ -1,0 +1,121 @@
+{
+  "ref": "Exodus 15:3",
+  "text": "יְהוָ֖ה אִ֣ישׁ מִלְחָמָ֑ה יְהוָ֖ה שְׁמֽוֹ׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "יהוה",
+      "pointed": "יְהוָ֖ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "איש",
+      "pointed": "אִ֣ישׁ",
+      "ipa": "ʔiʃ",
+      "roman": "ˈʾiš",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔiʃ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 2,
+      "display": "מלחמה",
+      "pointed": "מִלְחָמָ֑ה",
+      "ipa": "mil.ħɔ.mɔ",
+      "roman": "milḥåˈmå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mil",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ħɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "mɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "יהוה",
+      "pointed": "יְהוָ֖ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "שמו",
+      "pointed": "שְׁמֽוֹ׃",
+      "ipa": "ʃə.mø",
+      "roman": "šəˈmö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʃə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mø",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

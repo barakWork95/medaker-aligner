@@ -1,0 +1,537 @@
+{
+  "thresholds": {
+    "MIN_WORD_S": 0.05,
+    "SQUEEZED_S": 0.176,
+    "MIN_WORD_POSTERIOR": 0.109,
+    "OMIT_RELATIVE": 0.4,
+    "LOW_CONFIDENCE_MEDIAN": 0.1,
+    "CONTRAST_MARGIN": 0.1,
+    "CONTRAST_MIN_EVIDENCE": 0.504,
+    "MARKER_MIN": 0.12
+  },
+  "stats": {
+    "spoken_words": 483,
+    "posterior_p5": 0.13665709209938845,
+    "posterior_median": 0.4423929033335298,
+    "duration_p5": 0.22000424927592488,
+    "pair_phones": 141,
+    "pair_diff_p95": 0.01466469804290682,
+    "pair_diff_p99": 0.22591013908386087,
+    "pair_contrast_p99": 0.45399814248085
+  },
+  "warnings": [],
+  "files": [
+    {
+      "file": "פרשת-בראשית-שני.mp3",
+      "ref": "Genesis 2:4-14",
+      "reader": "temani-1",
+      "seconds": 182.49,
+      "words": 125,
+      "placed": 124,
+      "coverage": 0.79,
+      "medianPosterior": 0.453,
+      "issues": {},
+      "verses": [
+        {
+          "ref": "Genesis 2:4",
+          "words": 11,
+          "placed": 11,
+          "start": 0.52,
+          "end": 17.06,
+          "medianPosterior": 0.38,
+          "secondsPerWord": 1.5,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:5",
+          "words": 20,
+          "placed": 20,
+          "start": 17.64,
+          "end": 43.36,
+          "medianPosterior": 0.397,
+          "secondsPerWord": 1.29,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:6",
+          "words": 5,
+          "placed": 5,
+          "start": 45.82,
+          "end": 52.98,
+          "medianPosterior": 0.527,
+          "secondsPerWord": 1.43,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:7",
+          "words": 14,
+          "placed": 14,
+          "start": 55.46,
+          "end": 70.98,
+          "medianPosterior": 0.505,
+          "secondsPerWord": 1.11,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:8",
+          "words": 10,
+          "placed": 10,
+          "start": 73.69,
+          "end": 90.93,
+          "medianPosterior": 0.593,
+          "secondsPerWord": 1.72,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:9",
+          "words": 17,
+          "placed": 17,
+          "start": 91.53,
+          "end": 115.95,
+          "medianPosterior": 0.422,
+          "secondsPerWord": 1.44,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:10",
+          "words": 10,
+          "placed": 10,
+          "start": 116.47,
+          "end": 130.79,
+          "medianPosterior": 0.575,
+          "secondsPerWord": 1.43,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:11",
+          "words": 10,
+          "placed": 9,
+          "start": 131.31,
+          "end": 145.23,
+          "medianPosterior": 0.31,
+          "secondsPerWord": 1.39,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:12",
+          "words": 8,
+          "placed": 8,
+          "start": 145.85,
+          "end": 156.65,
+          "medianPosterior": 0.477,
+          "secondsPerWord": 1.35,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:13",
+          "words": 8,
+          "placed": 8,
+          "start": 157.25,
+          "end": 167.43,
+          "medianPosterior": 0.511,
+          "secondsPerWord": 1.27,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Genesis 2:14",
+          "words": 12,
+          "placed": 12,
+          "start": 167.91,
+          "end": 181.97,
+          "medianPosterior": 0.536,
+          "secondsPerWord": 1.17,
+          "collapsed": false,
+          "issues": 0
+        }
+      ],
+      "peek": null,
+      "warnings": [],
+      "alignMs": 78946
+    },
+    {
+      "file": "פרשת-בשלח-רביעי.mp3",
+      "ref": "Exodus 14:26-15:26",
+      "reader": "temani-1",
+      "seconds": 669.83,
+      "words": 358,
+      "placed": 354,
+      "coverage": 0.68,
+      "medianPosterior": 0.441,
+      "issues": {
+        "0": [
+          "ו נשמעה כ־V (בהגייה התימנית: W)"
+        ],
+        "117": [
+          "ו נשמעה כ־V (בהגייה התימנית: W)"
+        ]
+      },
+      "verses": [
+        {
+          "ref": "Exodus 14:26",
+          "words": 11,
+          "placed": 11,
+          "start": 0.6,
+          "end": 19.0,
+          "medianPosterior": 0.422,
+          "secondsPerWord": 1.67,
+          "collapsed": false,
+          "issues": 1
+        },
+        {
+          "ref": "Exodus 14:27",
+          "words": 17,
+          "placed": 17,
+          "start": 19.58,
+          "end": 45.52,
+          "medianPosterior": 0.582,
+          "secondsPerWord": 1.53,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 14:28",
+          "words": 14,
+          "placed": 14,
+          "start": 46.22,
+          "end": 68.22,
+          "medianPosterior": 0.425,
+          "secondsPerWord": 1.57,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 14:29",
+          "words": 11,
+          "placed": 11,
+          "start": 68.26,
+          "end": 83.62,
+          "medianPosterior": 0.483,
+          "secondsPerWord": 1.4,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 14:30",
+          "words": 13,
+          "placed": 13,
+          "start": 84.22,
+          "end": 104.16,
+          "medianPosterior": 0.511,
+          "secondsPerWord": 1.53,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 14:31",
+          "words": 16,
+          "placed": 15,
+          "start": 104.76,
+          "end": 125.0,
+          "medianPosterior": 0.485,
+          "secondsPerWord": 1.26,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:1",
+          "words": 17,
+          "placed": 17,
+          "start": 128.3,
+          "end": 160.52,
+          "medianPosterior": 0.395,
+          "secondsPerWord": 1.9,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:2",
+          "words": 11,
+          "placed": 11,
+          "start": 161.4,
+          "end": 185.04,
+          "medianPosterior": 0.489,
+          "secondsPerWord": 2.15,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:3",
+          "words": 5,
+          "placed": 5,
+          "start": 187.68,
+          "end": 194.88,
+          "medianPosterior": 0.329,
+          "secondsPerWord": 1.44,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:4",
+          "words": 9,
+          "placed": 9,
+          "start": 198.0,
+          "end": 213.7,
+          "medianPosterior": 0.331,
+          "secondsPerWord": 1.74,
+          "collapsed": false,
+          "issues": 1
+        },
+        {
+          "ref": "Exodus 15:5",
+          "words": 5,
+          "placed": 5,
+          "start": 214.36,
+          "end": 226.0,
+          "medianPosterior": 0.353,
+          "secondsPerWord": 2.33,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:6",
+          "words": 8,
+          "placed": 8,
+          "start": 226.72,
+          "end": 243.25,
+          "medianPosterior": 0.347,
+          "secondsPerWord": 2.07,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:7",
+          "words": 8,
+          "placed": 8,
+          "start": 243.87,
+          "end": 263.99,
+          "medianPosterior": 0.616,
+          "secondsPerWord": 2.52,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:8",
+          "words": 10,
+          "placed": 10,
+          "start": 264.64,
+          "end": 286.03,
+          "medianPosterior": 0.499,
+          "secondsPerWord": 2.14,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:9",
+          "words": 12,
+          "placed": 12,
+          "start": 286.03,
+          "end": 309.65,
+          "medianPosterior": 0.488,
+          "secondsPerWord": 1.97,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:10",
+          "words": 8,
+          "placed": 8,
+          "start": 312.71,
+          "end": 332.67,
+          "medianPosterior": 0.354,
+          "secondsPerWord": 2.49,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:11",
+          "words": 11,
+          "placed": 11,
+          "start": 333.27,
+          "end": 351.53,
+          "medianPosterior": 0.506,
+          "secondsPerWord": 1.66,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:12",
+          "words": 4,
+          "placed": 4,
+          "start": 354.61,
+          "end": 365.15,
+          "medianPosterior": 0.692,
+          "secondsPerWord": 2.63,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:13",
+          "words": 8,
+          "placed": 8,
+          "start": 365.69,
+          "end": 377.73,
+          "medianPosterior": 0.535,
+          "secondsPerWord": 1.5,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:14",
+          "words": 7,
+          "placed": 7,
+          "start": 380.79,
+          "end": 397.89,
+          "medianPosterior": 0.492,
+          "secondsPerWord": 2.44,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:15",
+          "words": 12,
+          "placed": 12,
+          "start": 397.89,
+          "end": 426.15,
+          "medianPosterior": 0.416,
+          "secondsPerWord": 2.36,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:16",
+          "words": 14,
+          "placed": 14,
+          "start": 426.87,
+          "end": 454.37,
+          "medianPosterior": 0.384,
+          "secondsPerWord": 1.96,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:17",
+          "words": 12,
+          "placed": 12,
+          "start": 457.41,
+          "end": 488.79,
+          "medianPosterior": 0.421,
+          "secondsPerWord": 2.61,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:18",
+          "words": 4,
+          "placed": 4,
+          "start": 491.67,
+          "end": 498.83,
+          "medianPosterior": 0.466,
+          "secondsPerWord": 1.79,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:19",
+          "words": 19,
+          "placed": 18,
+          "start": 499.05,
+          "end": 532.61,
+          "medianPosterior": 0.347,
+          "secondsPerWord": 1.77,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:20",
+          "words": 12,
+          "placed": 12,
+          "start": 533.39,
+          "end": 551.91,
+          "medianPosterior": 0.47,
+          "secondsPerWord": 1.54,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:21",
+          "words": 12,
+          "placed": 11,
+          "start": 552.35,
+          "end": 565.27,
+          "medianPosterior": 0.373,
+          "secondsPerWord": 1.08,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:22",
+          "words": 11,
+          "placed": 11,
+          "start": 565.91,
+          "end": 583.57,
+          "medianPosterior": 0.451,
+          "secondsPerWord": 1.61,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:23",
+          "words": 13,
+          "placed": 13,
+          "start": 584.07,
+          "end": 599.87,
+          "medianPosterior": 0.41,
+          "secondsPerWord": 1.22,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:24",
+          "words": 5,
+          "placed": 5,
+          "start": 602.31,
+          "end": 607.03,
+          "medianPosterior": 0.422,
+          "secondsPerWord": 0.94,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:25",
+          "words": 16,
+          "placed": 16,
+          "start": 609.39,
+          "end": 630.77,
+          "medianPosterior": 0.535,
+          "secondsPerWord": 1.34,
+          "collapsed": false,
+          "issues": 0
+        },
+        {
+          "ref": "Exodus 15:26",
+          "words": 23,
+          "placed": 22,
+          "start": 631.33,
+          "end": 668.61,
+          "medianPosterior": 0.526,
+          "secondsPerWord": 1.62,
+          "collapsed": false,
+          "issues": 0
+        }
+      ],
+      "peek": null,
+      "warnings": [],
+      "alignMs": 283110
+    }
+  ]
+}

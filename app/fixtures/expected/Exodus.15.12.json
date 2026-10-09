@@ -1,0 +1,122 @@
+{
+  "ref": "Exodus 15:12",
+  "text": "נָטִ֙יתָ֙ יְמִ֣ינְךָ֔ תִּבְלָעֵ֖מוֹ אָֽרֶץ׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "נטית",
+      "pointed": "נָטִ֙יתָ֙",
+      "ipa": "nɔ.tˤi.θɔ",
+      "roman": "nåˈṭiṯå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "nɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "tˤi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "θɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tarin-pashtin",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "ימינך",
+      "pointed": "יְמִ֣ינְךָ֔",
+      "ipa": "jə.min.xɔ",
+      "roman": "yəˈminḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "min",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "תבלעמו",
+      "pointed": "תִּבְלָעֵ֖מוֹ",
+      "ipa": "tiv.lɔ.ʕe.mø",
+      "roman": "tivlåˈʿemö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tiv",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʕe",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "mø",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "ארץ",
+      "pointed": "אָֽרֶץ׃",
+      "ipa": "ʔɔ.rasˤ",
+      "roman": "ʾåˈraṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "rasˤ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

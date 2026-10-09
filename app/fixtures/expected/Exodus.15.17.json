@@ -1,0 +1,366 @@
+{
+  "ref": "Exodus 15:17",
+  "text": "תְּבִאֵ֗מוֹ וְתִטָּעֵ֙מוֹ֙ בְּהַ֣ר נַחֲלָֽתְךָ֔ מָכ֧וֹן לְשִׁבְתְּךָ֛ פָּעַ֖לְתָּ יְהוָ֑ה מִקְּדָ֕שׁ אֲדֹנָ֖י כּוֹנְנ֥וּ יָדֶֽיךָ׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "תבאמו",
+      "pointed": "תְּבִאֵ֗מוֹ",
+      "ipa": "tə.vi.ʔe.mø",
+      "roman": "təviˈʾemö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "vi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔe",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "mø",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "revia",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "ותטעמו",
+      "pointed": "וְתִטָּעֵ֙מוֹ֙",
+      "ipa": "wə.θi.tˤtˤɔ.ʕe.mø",
+      "roman": "wəṯiṭṭåˈʿemö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "θi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "tˤtˤɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "ʕe",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 4,
+          "ipa": "mø",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tarin-pashtin",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "בהר",
+      "pointed": "בְּהַ֣ר",
+      "ipa": "bə.har",
+      "roman": "bəˈhar",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "bə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "har",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 3,
+      "display": "נחלתך",
+      "pointed": "נַחֲלָֽתְךָ֔",
+      "ipa": "na.ħa.lɔ.θə.xɔ",
+      "roman": "naḥalåṯəˈḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "na",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ħa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "lɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "θə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 4,
+          "ipa": "xɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "מכון",
+      "pointed": "מָכ֧וֹן",
+      "ipa": "mɔ.xøn",
+      "roman": "ˈmåḵön",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "xøn",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 5,
+      "display": "לשבתך",
+      "pointed": "לְשִׁבְתְּךָ֛",
+      "ipa": "lə.ʃiv.tə.xɔ",
+      "roman": "ləšivtəˈḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "lə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʃiv",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "tə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "xɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tevir",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "פעלת",
+      "pointed": "פָּעַ֖לְתָּ",
+      "ipa": "pɔ.ʕal.tɔ",
+      "roman": "påˈʿaltå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "pɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʕal",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "tɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "יהוה",
+      "pointed": "יְהוָ֑ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 8,
+      "display": "מקדש",
+      "pointed": "מִקְּדָ֕שׁ",
+      "ipa": "mi.ggə.ðɔʃ",
+      "roman": "miggəˈḏåš",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ggə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ðɔʃ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-gadol",
+      "disjunctive": true
+    },
+    {
+      "index": 9,
+      "display": "אדני",
+      "pointed": "אֲדֹנָ֖י",
+      "ipa": "ʔa.ðø.nɔj",
+      "roman": "ʾaḏöˈnåy",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ðø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "nɔj",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 10,
+      "display": "כוננו",
+      "pointed": "כּוֹנְנ֥וּ",
+      "ipa": "køn.nu",
+      "roman": "ˈkönnu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "køn",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "nu",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 11,
+      "display": "ידיך",
+      "pointed": "יָדֶֽיךָ׃",
+      "ipa": "jɔ.ða.xɔ",
+      "roman": "yåḏaˈḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ða",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

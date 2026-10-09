@@ -1,0 +1,214 @@
+{
+  "ref": "Genesis 2:12",
+  "text": "וּֽזֲהַ֛ב הָאָ֥רֶץ הַהִ֖וא ט֑וֹב שָׁ֥ם הַבְּדֹ֖לַח וְאֶ֥בֶן הַשֹּֽׁהַם׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "וזהב",
+      "pointed": "וּֽזֲהַ֛ב",
+      "ipa": "u.za.hav",
+      "roman": "uzaˈhav",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "za",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "hav",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tevir",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "הארץ",
+      "pointed": "הָאָ֥רֶץ",
+      "ipa": "hɔ.ʔɔ.rasˤ",
+      "roman": "håˈʾåraṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʔɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "rasˤ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 2,
+      "display": "ההוא",
+      "pointed": "הַהִ֖וא",
+      "ipa": "ha.hiw",
+      "roman": "haˈhiw",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hiw",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "טוב",
+      "pointed": "ט֑וֹב",
+      "ipa": "tˤøv",
+      "roman": "ˈṭöv",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tˤøv",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "שם",
+      "pointed": "שָׁ֥ם",
+      "ipa": "ʃɔm",
+      "roman": "ˈšåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʃɔm",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 5,
+      "display": "הבדלח",
+      "pointed": "הַבְּדֹ֖לַח",
+      "ipa": "ha.bbə.ðø.laħ",
+      "roman": "habbəˈḏölaḥ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "bbə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ðø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "laħ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "ואבן",
+      "pointed": "וְאֶ֥בֶן",
+      "ipa": "wə.ʔa.van",
+      "roman": "wəˈʾavan",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʔa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "van",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 7,
+      "display": "השהם",
+      "pointed": "הַשֹּֽׁהַם׃",
+      "ipa": "ha.ʃʃø.ham",
+      "roman": "haššöˈham",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʃʃø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ham",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

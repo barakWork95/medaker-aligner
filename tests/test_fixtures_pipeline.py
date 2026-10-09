@@ -18,8 +18,25 @@ def test_ref_from_filename():
 
 def test_manifest_shape():
     m = load_manifest()
-    assert "genesis_1_1_reader1.wav" in m
-    assert m["genesis_1_1_reader1.wav"]["ref"] == "Genesis 1:1"
+    assert "פרשת-בראשית-שני.mp3" in m  # keys are NFC-normalised
+    assert m["פרשת-בראשית-שני.mp3"]["ref"] == "Genesis 2:4-14"
+    assert m["פרשת-בשלח-רביעי.mp3"]["ref"] == "Exodus 14:26-15:26"
+
+
+def test_expand_ref_single_and_same_chapter_ranges():
+    from app.fixtures.registry import expand_ref
+
+    assert expand_ref("Genesis 1:1") == ["Genesis 1:1"]
+    assert expand_ref("Genesis 2:4-6") == ["Genesis 2:4", "Genesis 2:5", "Genesis 2:6"]
+    assert expand_ref("I Samuel 3:2-3") == ["I Samuel 3:2", "I Samuel 3:3"]
+
+
+def test_expand_ref_cross_chapter_uses_chapter_lengths(monkeypatch):
+    import app.fixtures.registry as reg
+
+    monkeypatch.setattr(reg, "chapter_lengths", lambda book: [31, 25, 24])  # fake Genesis shape
+    refs = reg.expand_ref("Genesis 1:30-2:2")
+    assert refs == ["Genesis 1:30", "Genesis 1:31", "Genesis 2:1", "Genesis 2:2"]
 
 
 def test_resolve_fixtures_from_a_temp_dir_with_cached_expectations(tmp_path, genesis_1_1_expected, monkeypatch):

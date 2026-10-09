@@ -1,0 +1,284 @@
+{
+  "ref": "Exodus 15:8",
+  "text": "וּבְר֤וּחַ אַפֶּ֙יךָ֙ נֶ֣עֶרְמוּ מַ֔יִם נִצְּב֥וּ כְמוֹ־נֵ֖ד נֹזְלִ֑ים קָֽפְא֥וּ תְהֹמֹ֖ת בְּלֶב־יָֽם׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "וברוח",
+      "pointed": "וּבְר֤וּחַ",
+      "ipa": "uv.ru.aħ",
+      "roman": "ˈuvruaḥ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "uv",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ru",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "aħ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "אפיך",
+      "pointed": "אַפֶּ֙יךָ֙",
+      "ipa": "ʔa.ppa.xɔ",
+      "roman": "ʾaˈppaḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ppa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tarin-pashtin",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "נערמו",
+      "pointed": "נֶ֣עֶרְמוּ",
+      "ipa": "na.ʕar.mu",
+      "roman": "ˈnaʿarmu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "na",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ʕar",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "mu",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 3,
+      "display": "מים",
+      "pointed": "מַ֔יִם",
+      "ipa": "ma.jim",
+      "roman": "ˈmayim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ma",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "jim",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "נצבו",
+      "pointed": "נִצְּב֥וּ",
+      "ipa": "ni.sˤsˤə.vu",
+      "roman": "niˈṣṣəvu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ni",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "sˤsˤə",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "vu",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 5,
+      "display": "כמו נד",
+      "pointed": "כְמוֹ־נֵ֖ד",
+      "ipa": "xə.mø neð",
+      "roman": "ḵəˈmö-ˈneḏ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "xə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "neð",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "נזלים",
+      "pointed": "נֹזְלִ֑ים",
+      "ipa": "nøz.lim",
+      "roman": "nözˈlim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "nøz",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lim",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "קפאו",
+      "pointed": "קָֽפְא֥וּ",
+      "ipa": "gɔ.fə.u",
+      "roman": "gåˈfəu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "gɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "fə",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 8,
+      "display": "תהמת",
+      "pointed": "תְהֹמֹ֖ת",
+      "ipa": "θə.hø.møθ",
+      "roman": "ṯəhöˈmöṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "θə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "møθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 9,
+      "display": "בלב ים",
+      "pointed": "בְּלֶב־יָֽם׃",
+      "ipa": "bə.lav jɔm",
+      "roman": "bəˈlav-ˈyåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "bə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lav",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "jɔm",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

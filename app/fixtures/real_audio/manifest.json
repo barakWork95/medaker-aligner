@@ -3,13 +3,19 @@
     "Drop recordings here (.wav .m4a .mp3 .webm .ogg .flac) and run: python scripts/calibrate_fixtures.py",
     "Filename convention infers the verse: <book>_<chapter>_<verse>_<anything>.<ext>, e.g. genesis_1_1_reader1.wav, i_samuel_3_2_dan.m4a",
     "Entries below are OPTIONAL overrides per file: ref, text (pointed), reader, notes, omittedWords (indices the reader skipped), issues (expected Temani deviations per word index), skip.",
-    "Missing verse text is fetched from Sefaria (WLC); missing Temani expectations are generated from the frontend (../medaker) and cached in app/fixtures/expected/."
+    "Missing verse text is fetched from Sefaria (WLC); missing Temani expectations are generated from the frontend (../medaker) and cached in app/fixtures/expected/.",
+    "ref may be a RANGE (\"Genesis 2:4-19\", \"Exodus 14:26-15:26\"): the recording is aligned as one transcript and reported per verse. Aliyah boundaries: Sefaria /api/v2/index/<Book> → alts.Parasha.nodes[].refs"
   ],
   "files": {
-    "genesis_1_1_reader1.wav": {
-      "ref": "Genesis 1:1",
-      "reader": "reader1",
-      "notes": "example entry — the file itself is not committed"
+    "פרשת-בראשית-שני.mp3": {
+      "ref": "Genesis 2:4-14",
+      "reader": "temani-1",
+      "notes": "Parashat Bereshit, sheni. The audio contains Genesis 2:4-14 only (verified by greedy decoding: starts 'eleh toldoth…', ends '…hu ferath' = 2:14), although the standard aliyah runs to 2:19. Authentic Yemenite reading, 182 s, ~1.2 s/word, ~13 dB SNR."
+    },
+    "פרשת-בשלח-רביעי.mp3": {
+      "ref": "Exodus 14:26-15:26",
+      "reader": "temani-1",
+      "notes": "Parashat Beshalach, revi'i (4th aliyah) incl. Shirat HaYam. Audio verified complete: greedy decode starts 'vayomar adonoy el moshe…' (14:26) and ends '…ki ani adonay rofe'ekha' (15:26). 670 s, ~1.5 s/word, the Song ~2–2.6 s/word."
     }
   }
 }

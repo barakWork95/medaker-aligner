@@ -1,0 +1,343 @@
+{
+  "ref": "Exodus 15:22",
+  "text": "וַיַּסַּ֨ע מֹשֶׁ֤ה אֶת־יִשְׂרָאֵל֙ מִיַּם־ס֔וּף וַיֵּצְא֖וּ אֶל־מִדְבַּר־שׁ֑וּר וַיֵּלְכ֧וּ שְׁלֹֽשֶׁת־יָמִ֛ים בַּמִּדְבָּ֖ר וְלֹא־מָ֥צְאוּ מָֽיִם׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ויסע",
+      "pointed": "וַיַּסַּ֨ע",
+      "ipa": "wa.jja.ssaʕ",
+      "roman": "wayyaˈssaʿ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jja",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ssaʕ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "qadma",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "משה",
+      "pointed": "מֹשֶׁ֤ה",
+      "ipa": "mø.ʃa",
+      "roman": "möˈša",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʃa",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 2,
+      "display": "את ישראל",
+      "pointed": "אֶת־יִשְׂרָאֵל֙",
+      "ipa": "ʔaθ jis.rɔ.ʔel",
+      "roman": "ˈʾaṯ-yisråˈʾel",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔaθ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "jis",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "rɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "ʔel",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "מים סוף",
+      "pointed": "מִיַּם־ס֔וּף",
+      "ipa": "mi.jjam suf",
+      "roman": "miˈyyam-ˈsuf",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jjam",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "suf",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "ויצאו",
+      "pointed": "וַיֵּצְא֖וּ",
+      "ipa": "wa.jjesˤ.u",
+      "roman": "waˈyyeṣu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jjesˤ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "אל מדבר שור",
+      "pointed": "אֶל־מִדְבַּר־שׁ֑וּר",
+      "ipa": "ʔal mið.bar ʃur",
+      "roman": "ˈʾal-miḏˈbar-ˈšur",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔal",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "mið",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "bar",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "ʃur",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "וילכו",
+      "pointed": "וַיֵּלְכ֧וּ",
+      "ipa": "wa.jjel.xu",
+      "roman": "waˈyyelḵu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jjel",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "xu",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 7,
+      "display": "שלשת ימים",
+      "pointed": "שְׁלֹֽשֶׁת־יָמִ֛ים",
+      "ipa": "ʃə.lø.ʃaθ jɔ.mim",
+      "roman": "šəlöˈšaṯ-yåˈmim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʃə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʃaθ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "jɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 4,
+          "ipa": "mim",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tevir",
+      "disjunctive": true
+    },
+    {
+      "index": 8,
+      "display": "במדבר",
+      "pointed": "בַּמִּדְבָּ֖ר",
+      "ipa": "ba.mmið.bɔr",
+      "roman": "bammiḏˈbår",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ba",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mmið",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "bɔr",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 9,
+      "display": "ולא מצאו",
+      "pointed": "וְלֹא־מָ֥צְאוּ",
+      "ipa": "wə.lø mɔsˤ.u",
+      "roman": "wəˈlö-ˈmåṣu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "mɔsˤ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 10,
+      "display": "מים",
+      "pointed": "מָֽיִם׃",
+      "ipa": "mɔ.jim",
+      "roman": "måˈyim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jim",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

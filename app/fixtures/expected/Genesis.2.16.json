@@ -1,0 +1,237 @@
+{
+  "ref": "Genesis 2:16",
+  "text": "וַיְצַו֙ יְהוָ֣ה אֱלֹהִ֔ים עַל־הָֽאָדָ֖ם לֵאמֹ֑ר מִכֹּ֥ל עֵֽץ־הַגָּ֖ן אָכֹ֥ל תֹּאכֵֽל׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ויצו",
+      "pointed": "וַיְצַו֙",
+      "ipa": "waj.sˤaw",
+      "roman": "wayˈṣaw",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "waj",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "sˤaw",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "יהוה",
+      "pointed": "יְהוָ֣ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 2,
+      "display": "אלהים",
+      "pointed": "אֱלֹהִ֔ים",
+      "ipa": "ʔa.lø.him",
+      "roman": "ʾalöˈhim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "him",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "על האדם",
+      "pointed": "עַל־הָֽאָדָ֖ם",
+      "ipa": "ʕal hɔ.ʔɔ.ðɔm",
+      "roman": "ˈʿal-håʾåˈḏåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʕal",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "ðɔm",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "לאמר",
+      "pointed": "לֵאמֹ֑ר",
+      "ipa": "le.mør",
+      "roman": "leˈmör",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "le",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mør",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "מכל",
+      "pointed": "מִכֹּ֥ל",
+      "ipa": "mi.kkøl",
+      "roman": "miˈkköl",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "kkøl",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 6,
+      "display": "עץ הגן",
+      "pointed": "עֵֽץ־הַגָּ֖ן",
+      "ipa": "ʕesˤ ha.ddʒɔn",
+      "roman": "ˈʿeṣ-haˈǧǧån",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʕesˤ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ddʒɔn",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "אכל",
+      "pointed": "אָכֹ֥ל",
+      "ipa": "ʔɔ.xøl",
+      "roman": "ʾåˈḵöl",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "xøl",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 8,
+      "display": "תאכל",
+      "pointed": "תֹּאכֵֽל׃",
+      "ipa": "tø.xel",
+      "roman": "töˈḵel",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "xel",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

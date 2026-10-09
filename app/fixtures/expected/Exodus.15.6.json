@@ -1,0 +1,214 @@
+{
+  "ref": "Exodus 15:6",
+  "text": "יְמִֽינְךָ֣ יְהוָ֔ה נֶאְדָּרִ֖י בַּכֹּ֑חַ יְמִֽינְךָ֥ יְהוָ֖ה תִּרְעַ֥ץ אוֹיֵֽב׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ימינך",
+      "pointed": "יְמִֽינְךָ֣",
+      "ipa": "jə.min.xɔ",
+      "roman": "yəminˈḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "min",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "יהוה",
+      "pointed": "יְהוָ֔ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "נאדרי",
+      "pointed": "נֶאְדָּרִ֖י",
+      "ipa": "naʔ.dɔ.ri",
+      "roman": "naʾdåˈri",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "naʔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "dɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ri",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "בכח",
+      "pointed": "בַּכֹּ֑חַ",
+      "ipa": "ba.kkø.aħ",
+      "roman": "baˈkköaḥ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ba",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "kkø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "aħ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "ימינך",
+      "pointed": "יְמִֽינְךָ֥",
+      "ipa": "jə.min.xɔ",
+      "roman": "yəminˈḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "min",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 5,
+      "display": "יהוה",
+      "pointed": "יְהוָ֖ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "תרעץ",
+      "pointed": "תִּרְעַ֥ץ",
+      "ipa": "tir.ʕasˤ",
+      "roman": "tirˈʿaṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tir",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʕasˤ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 7,
+      "display": "אויב",
+      "pointed": "אוֹיֵֽב׃",
+      "ipa": "ø.jev",
+      "roman": "öˈyev",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jev",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

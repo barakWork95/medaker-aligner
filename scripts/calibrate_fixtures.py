@@ -26,7 +26,31 @@ from app.calibration import ContrastStat, WordStat, calibrate, save_calibration 
 from app.fixtures.registry import CALIBRATION_FILE, REAL_AUDIO_DIR, resolve_fixtures  # noqa: E402
 
 
-def evaluate(directory: Path) -> tuple[list[WordStat], list[ContrastStat], list[dict]]:
+COLLAPSE_POSTERIOR = 0.08
+COLLAPSE_SECONDS_PER_WORD = 0.25
+
+
+def greedy_peek(aligner, wave, sr: int, seconds: float = 10.0) -> tuple[str, str]:
+    """What the model hears (uroman letters) in the first and last `seconds` — to label a file."""
+    import torch
+
+    inv = {v: k for k, v in aligner._dictionary.items()}
+
+    def decode(x):
+        em = aligner.emission(x, sr)
+        ids = em.argmax(dim=-1).tolist()
+        out, prev = [], None
+        for i in ids:
+            if i != prev and i != 0:
+                out.append(inv.get(i, "?"))
+            prev = i
+        return "".join(out)
+
+    n = int(seconds * sr)
+    return decode(wave[:n]), decode(wave[-n:])
+
+
+def evaluate(directory: Path, peek: bool = False) -> tuple[list[WordStat], list[ContrastStat], list[dict]]:
     import soundfile as sf
 
     from app.aligner import get_aligner
@@ -54,7 +78,8 @@ def evaluate(directory: Path) -> tuple[list[WordStat], list[ContrastStat], list[
         else:
             import base64
 
-            wave, sr = decode_base64_audio(base64.b64encode(data).decode(), "audio/" + fx.path.suffix.lstrip("."))
+            mime = {"mp3": "audio/mpeg", "m4a": "audio/mp4", "webm": "audio/webm", "ogg": "audio/ogg", "flac": "audio/flac", "aac": "audio/aac", "mp4": "audio/mp4"}.get(fx.path.suffix.lstrip(".").lower(), "application/octet-stream")
+            wave, sr = decode_base64_audio(base64.b64encode(data).decode(), mime)
         expected = [ExpectedWord(**w) for w in fx.expected]
         raw = aligner.raw_stats(wave, sr, expected)
         for w in raw["words"]:
@@ -66,6 +91,41 @@ def evaluate(directory: Path) -> tuple[list[WordStat], list[ContrastStat], list[
         placed = [w for w in words if w.start is not None]
         duration = len(wave) / sr
         covered = sum(w.end - w.start for w in placed)
+        posts = {w["word"]: w["posterior"] for w in raw["words"]}
+        by_index = {w.index: w for w in words}
+        per_verse = []
+        collapsed: list[str] = []
+        for vu in fx.verses:
+            idxs = [vu.word_offset + w["index"] for w in vu.expected]
+            vwords = [by_index[i] for i in idxs if i in by_index]
+            vplaced = [w for w in vwords if w.start is not None]
+            vposts = sorted(posts[i] for i in idxs if i in posts)
+            vstart = min(w.start for w in vplaced) if vplaced else None
+            vend = max(w.end for w in vplaced) if vplaced else None
+            median_post = vposts[len(vposts) // 2] if vposts else None
+            spw = (vend - vstart) / len(idxs) if vplaced and idxs else None
+            # a verse squeezed into a sliver at near-zero confidence was not in the audio
+            is_collapsed = bool(median_post is not None and median_post < COLLAPSE_POSTERIOR and spw is not None and spw < COLLAPSE_SECONDS_PER_WORD)
+            if is_collapsed:
+                collapsed.append(vu.ref)
+            per_verse.append({
+                "ref": vu.ref,
+                "words": len(idxs),
+                "placed": len(vplaced),
+                "start": round(vstart, 2) if vstart is not None else None,
+                "end": round(vend, 2) if vend is not None else None,
+                "medianPosterior": round(median_post, 3) if median_post is not None else None,
+                "secondsPerWord": round(spw, 2) if spw is not None else None,
+                "collapsed": is_collapsed,
+                "issues": sum(1 for w in vplaced if w.phonetic and w.phonetic.issues),
+            })
+        if collapsed:
+            warnings = list(warnings) + [f"{len(collapsed)} verse(s) collapsed to near-zero confidence ({collapsed[0]} … {collapsed[-1]}): the recording probably does not contain them — check the manifest range"]
+        if peek:
+            head, tail = greedy_peek(aligner, wave, sr)
+            entry_peek = {"first10s": head, "last10s": tail}
+        else:
+            entry_peek = None
         entry = {
             "file": fx.path.name,
             "ref": fx.ref,
@@ -76,13 +136,34 @@ def evaluate(directory: Path) -> tuple[list[WordStat], list[ContrastStat], list[
             "coverage": round(covered / duration, 2) if duration else 0,
             "medianPosterior": round(float(sorted(w["posterior"] for w in raw["words"])[len(raw["words"]) // 2]), 3) if raw["words"] else None,
             "issues": {w.index: w.phonetic.issues for w in placed if w.phonetic and w.phonetic.issues},
+            "verses": per_verse,
+            "peek": entry_peek,
             "warnings": warnings,
             "alignMs": int((time.time() - t0) * 1000),
         }
+        # words of collapsed verses must not tune the thresholds
+        collapsed_words = {vu.word_offset + w["index"] for vu in fx.verses if vu.ref in collapsed for w in vu.expected}
+        if collapsed_words:
+            word_stats[:] = [ws for ws in word_stats if not (ws.file == fx.path.name and ws.word in collapsed_words)]
+            contrast_stats[:] = [cs for cs in contrast_stats if not (cs.file == fx.path.name and cs.word in collapsed_words)]
         report.append(entry)
-        print(f"{fx.path.name:40s} {fx.ref:16s} {entry['placed']:2d}/{entry['words']:<2d} words  cov {entry['coverage']:.2f}  post {entry['medianPosterior']}  {len(entry['issues'])} words w/ issues  {entry['alignMs']} ms")
+        print(f"{fx.path.name:32s} {fx.ref:20s} {entry['placed']:3d}/{entry['words']:<3d} words  cov {entry['coverage']:.2f}  post {entry['medianPosterior']}  {len(entry['issues'])} words w/ issues  {entry['alignMs']/1000:.0f} s")
+        if len(per_verse) > 1:
+            for v in per_verse:
+                flag = "  ← COLLAPSED (not in audio?)" if v["collapsed"] else ""
+                print(f"    {v['ref']:18s} {v['placed']:2d}/{v['words']:<2d}  {v['start']}–{v['end']} s  post {v['medianPosterior']}  {v['secondsPerWord']} s/word  issues {v['issues']}{flag}")
+        if entry_peek:
+            print(f"    hears (first 10 s): {entry_peek['first10s']}")
+            print(f"    hears (last 10 s):  {entry_peek['last10s']}")
+        shown = 0
+        cstats = {(c["word"], c["ipa"]): c for c in raw["contrasts"]}
         for wi, issues in entry["issues"].items():
-            print(f"    word {wi} ({expected[wi].display}): " + "; ".join(issues))
+            if shown >= 12:
+                print(f"    … {len(entry['issues']) - shown} more words with issues")
+                break
+            detail = "  ".join(f"[{ipa}: expected {c['expected']:.2f} vs contrast {c['contrast']:.2f}]" for (w, ipa), c in cstats.items() if w == wi)
+            print(f"    word {wi} ({expected[wi].display}): " + "; ".join(issues) + "  " + detail)
+            shown += 1
         for w in warnings:
             print(f"    ! {w}")
     return word_stats, contrast_stats, report
@@ -93,8 +174,9 @@ def main() -> None:
     ap.add_argument("--dir", type=Path, default=REAL_AUDIO_DIR)
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="write calibration.json even when the fixtures look like non-speech")
+    ap.add_argument("--peek", action="store_true", help="also print what the model hears in the first/last 10 s of each file (helps labelling)")
     args = ap.parse_args()
-    word_stats, contrast_stats, report = evaluate(args.dir)
+    word_stats, contrast_stats, report = evaluate(args.dir, peek=args.peek)
     if not report:
         return
     result = calibrate(word_stats, contrast_stats)

@@ -1,0 +1,157 @@
+{
+  "ref": "Exodus 15:5",
+  "text": "תְּהֹמֹ֖ת יְכַסְיֻ֑מוּ יָרְד֥וּ בִמְצוֹלֹ֖ת כְּמוֹ־אָֽבֶן׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "תהמת",
+      "pointed": "תְּהֹמֹ֖ת",
+      "ipa": "tə.hø.møθ",
+      "roman": "təhöˈmöṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "møθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "יכסימו",
+      "pointed": "יְכַסְיֻ֑מוּ",
+      "ipa": "jə.xas.ju.mu",
+      "roman": "yəḵasˈyumu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "xas",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ju",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "mu",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "ירדו",
+      "pointed": "יָרְד֥וּ",
+      "ipa": "jɔr.ðu",
+      "roman": "ˈyårḏu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jɔr",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ðu",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 3,
+      "display": "במצולת",
+      "pointed": "בִמְצוֹלֹ֖ת",
+      "ipa": "vim.sˤø.løθ",
+      "roman": "vimṣöˈlöṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "vim",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "sˤø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "løθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "כמו אבן",
+      "pointed": "כְּמוֹ־אָֽבֶן׃",
+      "ipa": "kə.mø ʔɔ.van",
+      "roman": "kəˈmö-ʾåˈvan",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "kə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ʔɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "van",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

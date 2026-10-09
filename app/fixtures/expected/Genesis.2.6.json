@@ -1,0 +1,181 @@
+{
+  "ref": "Genesis 2:6",
+  "text": "וְאֵ֖ד יַֽעֲלֶ֣ה מִן־הָאָ֑רֶץ וְהִשְׁקָ֖ה אֶֽת־כָּל־פְּנֵֽי־הָֽאֲדָמָֽה׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ואד",
+      "pointed": "וְאֵ֖ד",
+      "ipa": "wə.ʔeð",
+      "roman": "wəˈʾeḏ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʔeð",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "יעלה",
+      "pointed": "יַֽעֲלֶ֣ה",
+      "ipa": "ja.ʕa.la",
+      "roman": "yaʿaˈla",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ja",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʕa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "la",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 2,
+      "display": "מן הארץ",
+      "pointed": "מִן־הָאָ֑רֶץ",
+      "ipa": "min hɔ.ʔɔ.rasˤ",
+      "roman": "ˈmin-håˈʾåraṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "min",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "rasˤ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "והשקה",
+      "pointed": "וְהִשְׁקָ֖ה",
+      "ipa": "wə.hiʃ.gɔ",
+      "roman": "wəhišˈgå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hiʃ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "gɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "את כל פני האדמה",
+      "pointed": "אֶֽת־כָּל־פְּנֵֽי־הָֽאֲדָמָֽה׃",
+      "ipa": "ʔaθ kɔl pə.ne hɔ.ʔa.ðɔ.mɔ",
+      "roman": "ˈʾaṯ-ˈkål-pəˈne-håʾaḏåˈmå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔaθ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "kɔl",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "pə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "ne",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 4,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 5,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 6,
+          "ipa": "ðɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 7,
+          "ipa": "mɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

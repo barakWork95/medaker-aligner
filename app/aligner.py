@@ -26,7 +26,7 @@ from .calibration import DEFAULT_THRESHOLDS, load_calibration
 from .contract import AlignWord, ExpectedWord, Phone, Phonetic, SyllableSpan
 from .fixtures.registry import CALIBRATION_FILE
 from .model_io import load_model
-from .temani_adapter import CONTRASTS, PhoneRef, Token, tokenize_expected
+from .temani_adapter import PhoneRef, Token, active_contrasts, tokenize_expected
 
 ENGINE_ID = "mms-fa-torchaudio"
 
@@ -51,6 +51,7 @@ OMIT_RELATIVE = THRESHOLDS["OMIT_RELATIVE"]
 LOW_CONFIDENCE_MEDIAN = THRESHOLDS["LOW_CONFIDENCE_MEDIAN"]
 # contrast checks: the competing letter must win by this much (mean posterior) to raise an issue
 CONTRAST_MARGIN = THRESHOLDS["CONTRAST_MARGIN"]
+CONTRAST_MIN_EVIDENCE = THRESHOLDS["CONTRAST_MIN_EVIDENCE"]
 MARKER_MIN = THRESHOLDS["MARKER_MIN"]
 CALIBRATED = THRESHOLDS != DEFAULT_THRESHOLDS
 
@@ -91,7 +92,20 @@ class MMSAligner:
         Log-softmax emission (frames × vocab) computed in overlapping chunks and stitched:
         the model's receptive field is far shorter than the overlap, so frames away from a
         chunk edge are identical to a single-pass result. Returns a CPU tensor.
+        The last result is memoised (keyed by length + a sample digest) so that align() and
+        raw_stats() on the same recording do not run the model twice.
         """
+        import hashlib
+
+        key = (waveform.shape[0], sr, hashlib.blake2b(np.ascontiguousarray(waveform, dtype=np.float32).tobytes(), digest_size=16).hexdigest())
+        cached = getattr(self, "_emission_cache", None)
+        if cached and cached[0] == key:
+            return cached[1]
+        em = self._emission_uncached(waveform, sr)
+        self._emission_cache = (key, em)
+        return em
+
+    def _emission_uncached(self, waveform: np.ndarray, sr: int):
         torch = self._torch
         hop = 320  # MMS frame = 20 ms @ 16 kHz
         n = waveform.shape[0]
@@ -256,7 +270,7 @@ class MMSAligner:
                 by_phone.setdefault(t.phone_index, []).append((s, t))
             for group in by_phone.values():
                 ipa = group[0][1].ipa
-                spec = CONTRASTS.get(ipa)
+                spec = active_contrasts().get(ipa)
                 if not spec:
                     continue
                 kind, e_letter, c_letter, _ = spec
@@ -274,7 +288,7 @@ class MMSAligner:
         return AlignWord(index=w.index, start=None, end=None, syllables=[], phones=[], phonetic=None)
 
     def _contrast_issue(self, ipa: str, emission: np.ndarray, start: int, end: int) -> Optional[str]:
-        spec = CONTRASTS.get(ipa)
+        spec = active_contrasts().get(ipa)
         if not spec or end <= start:
             return None
         kind, expected_letter, contrast_letter, text = spec
@@ -285,7 +299,8 @@ class MMSAligner:
         if e is None or c is None:
             return None
         if kind == "pair":
-            if float(probs[:, c].mean()) > float(probs[:, e].mean()) + CONTRAST_MARGIN:
+            c_mean = float(probs[:, c].mean())
+            if c_mean >= CONTRAST_MIN_EVIDENCE and c_mean > float(probs[:, e].mean()) + CONTRAST_MARGIN:
                 return text
         else:  # marker: the digraph's 'h' must be evidenced somewhere in the span
             if float(probs[:, e].max()) < MARKER_MIN and float(probs[:, c].mean()) > MARKER_MIN:

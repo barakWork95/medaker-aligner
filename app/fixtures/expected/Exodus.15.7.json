@@ -1,0 +1,226 @@
+{
+  "ref": "Exodus 15:7",
+  "text": "וּבְרֹ֥ב גְּאוֹנְךָ֖ תַּהֲרֹ֣ס קָמֶ֑יךָ תְּשַׁלַּח֙ חֲרֹ֣נְךָ֔ יֹאכְלֵ֖מוֹ כַּקַּֽשׁ׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "וברב",
+      "pointed": "וּבְרֹ֥ב",
+      "ipa": "uv.røv",
+      "roman": "uvˈröv",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "uv",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "røv",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "גאונך",
+      "pointed": "גְּאוֹנְךָ֖",
+      "ipa": "dʒə.øn.xɔ",
+      "roman": "ǧəönˈḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "dʒə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "øn",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "תהרס",
+      "pointed": "תַּהֲרֹ֣ס",
+      "ipa": "ta.ha.røs",
+      "roman": "tahaˈrös",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ta",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "røs",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 3,
+      "display": "קמיך",
+      "pointed": "קָמֶ֑יךָ",
+      "ipa": "gɔ.ma.xɔ",
+      "roman": "gåˈmaḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "gɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ma",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "תשלח",
+      "pointed": "תְּשַׁלַּח֙",
+      "ipa": "tə.ʃa.llaħ",
+      "roman": "təšaˈllaḥ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʃa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "llaħ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "חרנך",
+      "pointed": "חֲרֹ֣נְךָ֔",
+      "ipa": "ħa.røn.xɔ",
+      "roman": "ḥaˈrönḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ħa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "røn",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "יאכלמו",
+      "pointed": "יֹאכְלֵ֖מוֹ",
+      "ipa": "jøx.le.mø",
+      "roman": "yöḵˈlemö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jøx",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "le",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "mø",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "כקש",
+      "pointed": "כַּקַּֽשׁ׃",
+      "ipa": "ka.ggaʃ",
+      "roman": "kaˈggaš",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ka",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ggaʃ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

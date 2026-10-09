@@ -17,6 +17,7 @@ character spans back into phones, syllables and words.
 """
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 
 # IPA (multi-character symbols first so they match before their prefixes)
@@ -48,7 +49,14 @@ SINGLE_LETTERS = set("bdfghklmnprstvyz")
 
 # Temani contrasts the server checks acoustically. key = expected IPA phoneme.
 #   ("pair", expected_letter, contrast_letter): compare mean posteriors of the two letters.
+#       Validated on an authentic Yemenite reader (Genesis 2:4-14, 2026-10-09): 0 % false flags,
+#       contrast − expected posterior ≈ −0.7 … −0.9 → reliable.
 #   ("marker", marker_letter, contrast_letter): the digraph's distinguishing letter must show up.
+#       NOT reliable: the uroman letter "h" is not what the model lights up for a dental fricative,
+#       so TH/DH/GH/KH flagged 56–67 % of an authentic reader's phones. Disabled unless
+#       MEDAKER_MARKER_CONTRASTS=1 (kept for experimentation / a future model).
+MARKER_CONTRASTS_ENABLED = os.environ.get("MEDAKER_MARKER_CONTRASTS", "0") == "1"
+
 CONTRASTS: dict[str, tuple[str, str, str, str]] = {
     # ipa: (kind, expected/marker letter, contrast letter, Hebrew issue text)
     "w": ("pair", "w", "v", "ו נשמעה כ־V (בהגייה התימנית: W)"),
@@ -77,6 +85,11 @@ class PhoneRef:
     phone_index: int
     ipa: str
     letters: str
+
+
+def active_contrasts() -> dict[str, tuple[str, str, str, str]]:
+    """The contrast checks in force (marker checks only when explicitly enabled)."""
+    return {k: v for k, v in CONTRASTS.items() if v[0] == "pair" or MARKER_CONTRASTS_ENABLED}
 
 
 def ipa_to_phones(ipa: str) -> list[tuple[str, str]]:

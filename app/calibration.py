@@ -12,7 +12,8 @@ statistics gathered from fixtures whose reading is known to be correct (default)
   OMIT_RELATIVE       stays at 0.4 unless annotated omitted words exist, in which case it is
                       raised just enough to catch them (up to 0.7) without dropping spoken words.
   CONTRAST_MARGIN     ≥ the 95th percentile of (contrast − expected) mean posterior over phones
-                      read correctly (+0.02), so ≤ 5 % false Temani issues; clamped [0.05, 0.4].
+                      read correctly (+0.05), so ≤ 5 % false Temani issues; clamped [0.1, 0.4]
+                      (a correct reader sits far below zero, so the floor is what usually applies).
   MARKER_MIN          ≤ the 5th percentile of the marker letter's peak posterior over correctly
                       read digraphs (×0.8), clamped [0.03, 0.3].
 
@@ -35,6 +36,9 @@ DEFAULT_THRESHOLDS = {
     "OMIT_RELATIVE": 0.4,
     "LOW_CONFIDENCE_MEDIAN": 0.1,
     "CONTRAST_MARGIN": 0.15,
+    # the contrast letter must itself be this probable (mean posterior over the phone) before a
+    # deviation is reported — a margin alone flags phones where both letters are near zero
+    "CONTRAST_MIN_EVIDENCE": 0.25,
     "MARKER_MIN": 0.12,
 }
 
@@ -111,8 +115,11 @@ def calibrate(word_stats: list[WordStat], contrast_stats: list[ContrastStat], ba
     if pairs_ok:
         diffs = [c.contrast_mean - c.expected_mean for c in pairs_ok]
         p95 = _pct(diffs, 95)
-        th["CONTRAST_MARGIN"] = round(clamp(p95 + 0.02, 0.05, 0.4), 3)
-        stats.update(pair_phones=len(pairs_ok), pair_diff_p95=p95)
+        p99 = _pct(diffs, 99)
+        th["CONTRAST_MARGIN"] = round(clamp(p95 + 0.05, 0.1, 0.4), 3)
+        # evidence floor: above the 99th percentile of the contrast letter's own posterior on correct phones
+        th["CONTRAST_MIN_EVIDENCE"] = round(clamp((_pct([c.contrast_mean for c in pairs_ok], 99) or 0) + 0.05, 0.15, 0.6), 3)
+        stats.update(pair_phones=len(pairs_ok), pair_diff_p95=p95, pair_diff_p99=p99, pair_contrast_p99=_pct([c.contrast_mean for c in pairs_ok], 99))
     if markers_ok:
         p5 = _pct([c.expected_mean for c in markers_ok], 5)
         th["MARKER_MIN"] = round(clamp(p5 * 0.8, 0.03, 0.3), 3)
@@ -122,7 +129,7 @@ def calibrate(word_stats: list[WordStat], contrast_stats: list[ContrastStat], ba
         detected = 0
         for c in wrong:
             if c.kind == "pair":
-                detected += c.contrast_mean > c.expected_mean + th["CONTRAST_MARGIN"]
+                detected += c.contrast_mean > c.expected_mean + th["CONTRAST_MARGIN"] and c.contrast_mean >= th["CONTRAST_MIN_EVIDENCE"]
             else:
                 detected += c.expected_mean < th["MARKER_MIN"] and c.contrast_mean > th["MARKER_MIN"]
         stats.update(annotated_deviations=len(wrong), deviations_detected=detected)

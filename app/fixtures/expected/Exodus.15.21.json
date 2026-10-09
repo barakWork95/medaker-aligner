@@ -1,0 +1,288 @@
+{
+  "ref": "Exodus 15:21",
+  "text": "וַתַּ֥עַן לָהֶ֖ם מִרְיָ֑ם שִׁ֤ירוּ לַֽיהוָה֙ כִּֽי־גָאֹ֣ה גָּאָ֔ה ס֥וּס וְרֹכְב֖וֹ רָמָ֥ה בַיָּֽם׃ (ס)",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ותען",
+      "pointed": "וַתַּ֥עַן",
+      "ipa": "wa.tta.ʕan",
+      "roman": "waˈttaʿan",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "tta",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ʕan",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "להם",
+      "pointed": "לָהֶ֖ם",
+      "ipa": "lɔ.ham",
+      "roman": "låˈham",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "lɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ham",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "מרים",
+      "pointed": "מִרְיָ֑ם",
+      "ipa": "mir.jɔm",
+      "roman": "mirˈyåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mir",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jɔm",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "שירו",
+      "pointed": "שִׁ֤ירוּ",
+      "ipa": "ʃi.ru",
+      "roman": "ˈširu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʃi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ru",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 4,
+      "display": "ליהוה",
+      "pointed": "לַֽיהוָה֙",
+      "ipa": "la.jhwɔ",
+      "roman": "laˈyhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "la",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jhwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "כי גאה",
+      "pointed": "כִּֽי־גָאֹ֣ה",
+      "ipa": "ki ɣɔ.ʔø",
+      "roman": "ˈki-ġåˈʾö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ki",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ɣɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔø",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 6,
+      "display": "גאה",
+      "pointed": "גָּאָ֔ה",
+      "ipa": "dʒɔ.ʔɔ",
+      "roman": "ǧåˈʾå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "dʒɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʔɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "סוס",
+      "pointed": "ס֥וּס",
+      "ipa": "sus",
+      "roman": "ˈsus",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "sus",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 8,
+      "display": "ורכבו",
+      "pointed": "וְרֹכְב֖וֹ",
+      "ipa": "wə.røx.vø",
+      "roman": "wəˈröḵvö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "røx",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "vø",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 9,
+      "display": "רמה",
+      "pointed": "רָמָ֥ה",
+      "ipa": "rɔ.mɔ",
+      "roman": "råˈmå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "rɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mɔ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 10,
+      "display": "בים",
+      "pointed": "בַיָּֽם׃",
+      "ipa": "va.jjɔm",
+      "roman": "vaˈyyåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "va",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jjɔm",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    },
+    {
+      "index": 11,
+      "display": "(ס)",
+      "pointed": "(ס)",
+      "ipa": "s",
+      "roman": "ˈs",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "s",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    }
+  ]
+}

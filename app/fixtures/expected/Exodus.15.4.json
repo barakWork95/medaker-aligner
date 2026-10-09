@@ -1,0 +1,249 @@
+{
+  "ref": "Exodus 15:4",
+  "text": "מַרְכְּבֹ֥ת פַּרְעֹ֛ה וְחֵיל֖וֹ יָרָ֣ה בַיָּ֑ם וּמִבְחַ֥ר שָֽׁלִשָׁ֖יו טֻבְּע֥וּ בְיַם־סֽוּף׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "מרכבת",
+      "pointed": "מַרְכְּבֹ֥ת",
+      "ipa": "mar.kə.vøθ",
+      "roman": "markəˈvöṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mar",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "kə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "vøθ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "פרעה",
+      "pointed": "פַּרְעֹ֛ה",
+      "ipa": "par.ʕø",
+      "roman": "parˈʿö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "par",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʕø",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tevir",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "וחילו",
+      "pointed": "וְחֵיל֖וֹ",
+      "ipa": "wə.ħe.lø",
+      "roman": "wəˈḥelö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ħe",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "lø",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "ירה",
+      "pointed": "יָרָ֣ה",
+      "ipa": "jɔ.rɔ",
+      "roman": "yåˈrå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "rɔ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 4,
+      "display": "בים",
+      "pointed": "בַיָּ֑ם",
+      "ipa": "va.jjɔm",
+      "roman": "vaˈyyåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "va",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jjɔm",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "ומבחר",
+      "pointed": "וּמִבְחַ֥ר",
+      "ipa": "u.miv.ħar",
+      "roman": "umivˈḥar",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "miv",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ħar",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 6,
+      "display": "שלשיו",
+      "pointed": "שָֽׁלִשָׁ֖יו",
+      "ipa": "ʃɔ.li.ʃɔjw",
+      "roman": "šåliˈšåyw",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʃɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "li",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʃɔjw",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "טבעו",
+      "pointed": "טֻבְּע֥וּ",
+      "ipa": "tˤu.bbə.ʕu",
+      "roman": "ṭuˈbbəʿu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tˤu",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "bbə",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ʕu",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 8,
+      "display": "בים סוף",
+      "pointed": "בְיַם־סֽוּף׃",
+      "ipa": "və.jam suf",
+      "roman": "vəˈyam-ˈsuf",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "və",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jam",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "suf",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

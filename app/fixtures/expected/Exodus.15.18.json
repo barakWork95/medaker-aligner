@@ -1,0 +1,104 @@
+{
+  "ref": "Exodus 15:18",
+  "text": "יְהוָ֥ה ׀ יִמְלֹ֖ךְ לְעֹלָ֥ם וָעֶֽד׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "יהוה",
+      "pointed": "יְהוָ֥ה׀",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "paseq",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "ימלך",
+      "pointed": "יִמְלֹ֖ךְ",
+      "ipa": "jim.løx",
+      "roman": "yimˈlöḵ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jim",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "løx",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "לעלם",
+      "pointed": "לְעֹלָ֥ם",
+      "ipa": "lə.ʕø.lɔm",
+      "roman": "ləʿöˈlåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "lə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʕø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "lɔm",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 3,
+      "display": "ועד",
+      "pointed": "וָעֶֽד׃",
+      "ipa": "wɔ.ʕað",
+      "roman": "wåˈʿaḏ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʕað",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

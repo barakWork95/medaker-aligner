@@ -44,11 +44,20 @@ _BOOK_SLUGS.update({"1_samuel": "I Samuel", "2_samuel": "II Samuel", "1_kings": 
 
 
 @dataclass
+class VerseUnit:
+    ref: str  # "Genesis 2:4"
+    text: str
+    expected: list[dict]  # word indices local to the verse
+    word_offset: int  # index of this verse's first word in the fixture's concatenated expected
+
+
+@dataclass
 class Fixture:
     path: Path
-    ref: str  # "Genesis 1:1"
-    text: str  # pointed verse
-    expected: list[dict]
+    ref: str  # "Genesis 1:1" or a range "Genesis 2:4-19" / "Exodus 14:26-15:26"
+    text: str  # pointed text of all verses, space-joined
+    expected: list[dict]  # concatenated, word indices re-numbered across verses
+    verses: list[VerseUnit] = field(default_factory=list)
     reader: Optional[str] = None
     notes: Optional[str] = None
     omitted_words: list[int] = field(default_factory=list)
@@ -58,6 +67,45 @@ class Fixture:
     def verse_key(self) -> str:
         book, cv = self.ref.rsplit(" ", 1)
         return f"{book.replace(' ', '_')}.{cv.replace(':', '.')}"
+
+    @property
+    def is_range(self) -> bool:
+        return len(self.verses) > 1
+
+
+def expand_ref(ref: str) -> list[str]:
+    """
+    "Genesis 1:1" → ["Genesis 1:1"]; "Genesis 2:4-19" → 2:4 … 2:19;
+    "Exodus 14:26-15:26" → 14:26 … 15:26 (chapter lengths from Sefaria's shape API).
+    """
+    m = re.match(r"^(.+?) (\d+):(\d+)(?:-(?:(\d+):)?(\d+))?$", ref.strip())
+    if not m:
+        raise ValueError(f"bad ref {ref!r}")
+    book, c1, v1, c2, v2 = m.group(1), int(m.group(2)), int(m.group(3)), m.group(4), m.group(5)
+    if v2 is None:
+        return [f"{book} {c1}:{v1}"]
+    c2 = int(c2) if c2 else c1
+    v2 = int(v2)
+    if c2 == c1:
+        return [f"{book} {c1}:{v}" for v in range(v1, v2 + 1)]
+    lengths = chapter_lengths(book)
+    out = []
+    for c in range(c1, c2 + 1):
+        start = v1 if c == c1 else 1
+        end = v2 if c == c2 else lengths[c - 1]
+        out.extend(f"{book} {c}:{v}" for v in range(start, end + 1))
+    return out
+
+
+_shape_cache: dict[str, list[int]] = {}
+
+
+def chapter_lengths(book: str) -> list[int]:
+    if book not in _shape_cache:
+        url = f"https://www.sefaria.org/api/shape/{urllib.parse.quote(book)}"
+        with urllib.request.urlopen(url, timeout=30) as r:
+            _shape_cache[book] = json.load(r)[0]["chapters"]
+    return _shape_cache[book]
 
 
 def ref_from_filename(name: str) -> Optional[str]:
@@ -105,10 +153,12 @@ def export_expected(text: str, frontend: Path = FRONTEND_DIR) -> list[dict]:
 
 
 def load_manifest(path: Path = MANIFEST) -> dict[str, dict]:
+    """Manifest entries keyed by NFC-normalised filename (macOS may hand us NFD names)."""
     if not path.exists():
         return {}
     data = json.loads(path.read_text(encoding="utf-8"))
-    return data.get("files", {}) if isinstance(data, dict) else {}
+    files = data.get("files", {}) if isinstance(data, dict) else {}
+    return {unicodedata.normalize("NFC", k): v for k, v in files.items()}
 
 
 def expected_cache_path(ref: str) -> Path:
@@ -144,20 +194,34 @@ def resolve_fixtures(directory: Path = REAL_AUDIO_DIR, manifest: Optional[dict[s
     manifest = load_manifest(directory / "manifest.json") if manifest is None else manifest
     out: list[Fixture] = []
     for path in audio_files(directory):
-        entry = manifest.get(path.name, {})
+        entry = manifest.get(unicodedata.normalize("NFC", path.name), {})
         if entry.get("skip"):
             continue
         ref = entry.get("ref") or ref_from_filename(path.name)
         if not ref:
             print(f"! {path.name}: cannot infer the verse — add a manifest entry with \"ref\"")
             continue
-        text, expected = resolve_expected(ref, entry.get("text"), **kw)
+        refs = expand_ref(ref)
+        verses: list[VerseUnit] = []
+        expected: list[dict] = []
+        texts: list[str] = []
+        for vref in refs:
+            vtext, vexp = resolve_expected(vref, entry.get("text") if len(refs) == 1 else None, **kw)
+            offset = len(expected)
+            verses.append(VerseUnit(ref=vref, text=vtext, expected=vexp, word_offset=offset))
+            for w in vexp:
+                w = dict(w)
+                w["index"] = offset + w["index"]
+                expected.append(w)
+            texts.append(vtext)
+        text = " ".join(texts)
         out.append(
             Fixture(
                 path=path,
                 ref=ref,
                 text=text,
                 expected=expected,
+                verses=verses,
                 reader=entry.get("reader"),
                 notes=entry.get("notes"),
                 omitted_words=[int(i) for i in entry.get("omittedWords", [])],

@@ -1,0 +1,151 @@
+{
+  "ref": "Genesis 1:23",
+  "text": "וַֽיְהִי־עֶ֥רֶב וַֽיְהִי־בֹ֖קֶר י֥וֹם חֲמִישִֽׁי׃ (פ)",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ויהי ערב",
+      "pointed": "וַֽיְהִי־עֶ֥רֶב",
+      "ipa": "wa.jə.hi ʕa.rav",
+      "roman": "wayəˈhi-ˈʿarav",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "hi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "ʕa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 4,
+          "ipa": "rav",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "ויהי בקר",
+      "pointed": "וַֽיְהִי־בֹ֖קֶר",
+      "ipa": "wa.jə.hi vø.gar",
+      "roman": "wayəˈhi-ˈvögar",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "hi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "vø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 4,
+          "ipa": "gar",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "יום",
+      "pointed": "י֥וֹם",
+      "ipa": "jøm",
+      "roman": "ˈyöm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jøm",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 3,
+      "display": "חמישי",
+      "pointed": "חֲמִישִֽׁי׃",
+      "ipa": "ħa.mi.ʃi",
+      "roman": "ḥamiˈši",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ħa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʃi",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "(פ)",
+      "pointed": "(פ)",
+      "ipa": "f",
+      "roman": "ˈf",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "f",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    }
+  ]
+}

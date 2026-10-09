@@ -1,0 +1,372 @@
+{
+  "ref": "Exodus 15:20",
+  "text": "וַתִּקַּח֩ מִרְיָ֨ם הַנְּבִיאָ֜ה אֲח֧וֹת אַהֲרֹ֛ן אֶת־הַתֹּ֖ף בְּיָדָ֑הּ וַתֵּצֶ֤אןָ כָֽל־הַנָּשִׁים֙ אַחֲרֶ֔יהָ בְּתֻפִּ֖ים וּבִמְחֹלֹֽת׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ותקח",
+      "pointed": "וַתִּקַּח֩",
+      "ipa": "wa.tti.ggaħ",
+      "roman": "wattiˈggaḥ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "tti",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ggaħ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "מרים",
+      "pointed": "מִרְיָ֨ם",
+      "ipa": "mir.jɔm",
+      "roman": "mirˈyåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mir",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jɔm",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "qadma",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "הנביאה",
+      "pointed": "הַנְּבִיאָ֜ה",
+      "ipa": "ha.nnə.vi.ʔɔ",
+      "roman": "hannəviˈʾå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "nnə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "vi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "ʔɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "geresh",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "אחות",
+      "pointed": "אֲח֧וֹת",
+      "ipa": "ʔa.ħøθ",
+      "roman": "ˈʾaḥöṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ħøθ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 4,
+      "display": "אהרן",
+      "pointed": "אַהֲרֹ֛ן",
+      "ipa": "ʔa.ha.røn",
+      "roman": "ʾahaˈrön",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "røn",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tevir",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "את התף",
+      "pointed": "אֶת־הַתֹּ֖ף",
+      "ipa": "ʔaθ ha.ttøf",
+      "roman": "ˈʾaṯ-haˈttöf",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔaθ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ttøf",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "בידה",
+      "pointed": "בְּיָדָ֑הּ",
+      "ipa": "bə.jɔ.ðɔh",
+      "roman": "bəyåˈḏåh",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "bə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "jɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ðɔh",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "ותצאן",
+      "pointed": "וַתֵּצֶ֤אןָ",
+      "ipa": "wa.tte.sˤa.nɔ",
+      "roman": "watteˈṣanå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "tte",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "sˤa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "nɔ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 8,
+      "display": "כל הנשים",
+      "pointed": "כָֽל־הַנָּשִׁים֙",
+      "ipa": "xɔl ha.nnɔ.ʃim",
+      "roman": "ˈḵål-hannåˈšim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "xɔl",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "nnɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "ʃim",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 9,
+      "display": "אחריה",
+      "pointed": "אַחֲרֶ֔יהָ",
+      "ipa": "ʔa.ħa.ra.ɔ",
+      "roman": "ʾaḥaˈraå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ħa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ra",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "ɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 10,
+      "display": "בתפים",
+      "pointed": "בְּתֻפִּ֖ים",
+      "ipa": "bə.θu.ppim",
+      "roman": "bəṯuˈppim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "bə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "θu",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ppim",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 11,
+      "display": "ובמחלת",
+      "pointed": "וּבִמְחֹלֹֽת׃",
+      "ipa": "u.vim.ħø.løθ",
+      "roman": "uvimḥöˈlöṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "u",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "vim",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ħø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "løθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

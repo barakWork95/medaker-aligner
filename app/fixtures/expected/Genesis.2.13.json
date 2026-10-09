@@ -1,0 +1,208 @@
+{
+  "ref": "Genesis 2:13",
+  "text": "וְשֵֽׁם־הַנָּהָ֥ר הַשֵּׁנִ֖י גִּיח֑וֹן ה֣וּא הַסּוֹבֵ֔ב אֵ֖ת כָּל־אֶ֥רֶץ כּֽוּשׁ׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "ושם הנהר",
+      "pointed": "וְשֵֽׁם־הַנָּהָ֥ר",
+      "ipa": "wə.ʃem ha.nnɔ.hɔr",
+      "roman": "wəˈšem-hannåˈhår",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʃem",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "nnɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 4,
+          "ipa": "hɔr",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "השני",
+      "pointed": "הַשֵּׁנִ֖י",
+      "ipa": "ha.ʃʃe.ni",
+      "roman": "haššeˈni",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʃʃe",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ni",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "גיחון",
+      "pointed": "גִּיח֑וֹן",
+      "ipa": "dʒi.ħøn",
+      "roman": "ˈǧiḥön",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "dʒi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ħøn",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "הוא",
+      "pointed": "ה֣וּא",
+      "ipa": "hu",
+      "roman": "ˈhu",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "hu",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 4,
+      "display": "הסובב",
+      "pointed": "הַסּוֹבֵ֔ב",
+      "ipa": "ha.ssø.vev",
+      "roman": "hassöˈvev",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ssø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "vev",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "את",
+      "pointed": "אֵ֖ת",
+      "ipa": "ʔeθ",
+      "roman": "ˈʾeṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔeθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "כל ארץ",
+      "pointed": "כָּל־אֶ֥רֶץ",
+      "ipa": "kɔl ʔa.rasˤ",
+      "roman": "ˈkål-ˈʾaraṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "kɔl",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ʔa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "rasˤ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 7,
+      "display": "כוש",
+      "pointed": "כּֽוּשׁ׃",
+      "ipa": "kuʃ",
+      "roman": "ˈkuš",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "kuʃ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

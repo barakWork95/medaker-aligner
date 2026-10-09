@@ -46,12 +46,19 @@ def test_genesis_1_1_transcript(genesis_1_1_expected):
     assert [p.ipa for p in phones if p.word == 6] == ["h", "ɔ", "ʔ", "ɔ", "r", "a", "sˤ"]
 
 
-def test_contrast_table_targets_the_temani_shifts():
+def test_contrast_table_targets_the_temani_shifts(monkeypatch):
+    from app import temani_adapter
+
     assert CONTRASTS["w"][:3] == ("pair", "w", "v")
     assert CONTRASTS["g"][:3] == ("pair", "g", "k")
     assert CONTRASTS["θ"][:3] == ("marker", "h", "t")
     for spec in CONTRASTS.values():
         assert "בהגייה התימנית" in spec[3]
+    # marker checks are off by default (false positives on authentic readers), pair checks on
+    monkeypatch.setattr(temani_adapter, "MARKER_CONTRASTS_ENABLED", False)
+    assert set(temani_adapter.active_contrasts()) == {"w", "g", "dʒ"}
+    monkeypatch.setattr(temani_adapter, "MARKER_CONTRASTS_ENABLED", True)
+    assert "θ" in temani_adapter.active_contrasts()
 
 
 def test_empty_word_gets_a_placeholder_token():

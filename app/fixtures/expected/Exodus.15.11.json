@@ -1,0 +1,289 @@
+{
+  "ref": "Exodus 15:11",
+  "text": "מִֽי־כָמֹ֤כָה בָּֽאֵלִם֙ יְהוָ֔ה מִ֥י כָּמֹ֖כָה נֶאְדָּ֣ר בַּקֹּ֑דֶשׁ נוֹרָ֥א תְהִלֹּ֖ת עֹ֥שֵׂה פֶֽלֶא׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "מי כמכה",
+      "pointed": "מִֽי־כָמֹ֤כָה",
+      "ipa": "mi xɔ.mø.xɔ",
+      "roman": "ˈmi-ḵåˈmöḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mi",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "xɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "mø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "xɔ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 1,
+      "display": "באלם",
+      "pointed": "בָּֽאֵלִם֙",
+      "ipa": "bɔ.ʔe.lim",
+      "roman": "båʾeˈlim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "bɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʔe",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "lim",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 2,
+      "display": "יהוה",
+      "pointed": "יְהוָ֔ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "מי",
+      "pointed": "מִ֥י",
+      "ipa": "mi",
+      "roman": "ˈmi",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "mi",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 4,
+      "display": "כמכה",
+      "pointed": "כָּמֹ֖כָה",
+      "ipa": "kɔ.mø.xɔ",
+      "roman": "kåˈmöḵå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "kɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "xɔ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 5,
+      "display": "נאדר",
+      "pointed": "נֶאְדָּ֣ר",
+      "ipa": "naʔ.dɔr",
+      "roman": "naʾˈdår",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "naʔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "dɔr",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 6,
+      "display": "בקדש",
+      "pointed": "בַּקֹּ֑דֶשׁ",
+      "ipa": "ba.ggø.ðaʃ",
+      "roman": "baˈggöḏaš",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ba",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ggø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ðaʃ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 7,
+      "display": "נורא",
+      "pointed": "נוֹרָ֥א",
+      "ipa": "nø.rɔ",
+      "roman": "nöˈrå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "nø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "rɔ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 8,
+      "display": "תהלת",
+      "pointed": "תְהִלֹּ֖ת",
+      "ipa": "θə.hi.lløθ",
+      "roman": "ṯəhiˈllöṯ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "θə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hi",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "lløθ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 9,
+      "display": "עשה",
+      "pointed": "עֹ֥שֵׂה",
+      "ipa": "ʕø.se",
+      "roman": "ˈʿöse",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʕø",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "se",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 10,
+      "display": "פלא",
+      "pointed": "פֶֽלֶא׃",
+      "ipa": "fa.la",
+      "roman": "faˈla",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "fa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "la",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}

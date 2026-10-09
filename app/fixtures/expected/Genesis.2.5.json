@@ -1,0 +1,538 @@
+{
+  "ref": "Genesis 2:5",
+  "text": "וְכֹ֣ל ׀ שִׂ֣יחַ הַשָּׂדֶ֗ה טֶ֚רֶם יִֽהְיֶ֣ה בָאָ֔רֶץ וְכָל־עֵ֥שֶׂב הַשָּׂדֶ֖ה טֶ֣רֶם יִצְמָ֑ח כִּי֩ לֹ֨א הִמְטִ֜יר יְהוָ֤ה אֱלֹהִים֙ עַל־הָאָ֔רֶץ וְאָדָ֣ם אַ֔יִן לַֽעֲבֹ֖ד אֶת־הָֽאֲדָמָֽה׃",
+  "expected": [
+    {
+      "index": 0,
+      "display": "וכל",
+      "pointed": "וְכֹ֣ל׀",
+      "ipa": "wə.xøl",
+      "roman": "wəˈḵöl",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "xøl",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "paseq",
+      "disjunctive": true
+    },
+    {
+      "index": 1,
+      "display": "שיח",
+      "pointed": "שִׂ֣יחַ",
+      "ipa": "si.aħ",
+      "roman": "ˈsiaḥ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "si",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "aħ",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 2,
+      "display": "השדה",
+      "pointed": "הַשָּׂדֶ֗ה",
+      "ipa": "ha.ssɔ.ða",
+      "roman": "hassåˈḏa",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ssɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ða",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "revia",
+      "disjunctive": true
+    },
+    {
+      "index": 3,
+      "display": "טרם",
+      "pointed": "טֶ֚רֶם",
+      "ipa": "tˤa.ram",
+      "roman": "ṭaˈram",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tˤa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ram",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "yetiv",
+      "disjunctive": true
+    },
+    {
+      "index": 4,
+      "display": "יהיה",
+      "pointed": "יִֽהְיֶ֣ה",
+      "ipa": "ji.hə.ja",
+      "roman": "yihəˈya",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ji",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ja",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 5,
+      "display": "בארץ",
+      "pointed": "בָאָ֔רֶץ",
+      "ipa": "vɔ.ʔɔ.rasˤ",
+      "roman": "våˈʾåraṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "vɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʔɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "rasˤ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 6,
+      "display": "וכל עשב",
+      "pointed": "וְכָל־עֵ֥שֶׂב",
+      "ipa": "wə.xɔl ʕe.sav",
+      "roman": "wəˈḵål-ˈʿesav",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "xɔl",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 2,
+          "ipa": "ʕe",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "sav",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 7,
+      "display": "השדה",
+      "pointed": "הַשָּׂדֶ֖ה",
+      "ipa": "ha.ssɔ.ða",
+      "roman": "hassåˈḏa",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ha",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ssɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ða",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 8,
+      "display": "טרם",
+      "pointed": "טֶ֣רֶם",
+      "ipa": "tˤa.ram",
+      "roman": "ˈṭaram",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "tˤa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "ram",
+          "stressed": false,
+          "weight": 1
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 9,
+      "display": "יצמח",
+      "pointed": "יִצְמָ֑ח",
+      "ipa": "jisˤ.mɔħ",
+      "roman": "yiṣˈmåḥ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jisˤ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "mɔħ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "etnahta",
+      "disjunctive": true
+    },
+    {
+      "index": 10,
+      "display": "כי",
+      "pointed": "כִּי֩",
+      "ipa": "ki",
+      "roman": "ˈki",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ki",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 11,
+      "display": "לא",
+      "pointed": "לֹ֨א",
+      "ipa": "lø",
+      "roman": "ˈlö",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "lø",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "qadma",
+      "disjunctive": true
+    },
+    {
+      "index": 12,
+      "display": "המטיר",
+      "pointed": "הִמְטִ֜יר",
+      "ipa": "him.tˤir",
+      "roman": "himˈṭir",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "him",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "tˤir",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "geresh",
+      "disjunctive": true
+    },
+    {
+      "index": 13,
+      "display": "יהוה",
+      "pointed": "יְהוָ֤ה",
+      "ipa": "jə.hwɔ",
+      "roman": "yəˈhwå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "jə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "hwɔ",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 14,
+      "display": "אלהים",
+      "pointed": "אֱלֹהִים֙",
+      "ipa": "ʔa.lø.him",
+      "roman": "ʾalöˈhim",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "lø",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "him",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "pashta",
+      "disjunctive": true
+    },
+    {
+      "index": 15,
+      "display": "על הארץ",
+      "pointed": "עַל־הָאָ֔רֶץ",
+      "ipa": "ʕal hɔ.ʔɔ.rasˤ",
+      "roman": "ˈʿal-håˈʾåraṣ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʕal",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔɔ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 3,
+          "ipa": "rasˤ",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 16,
+      "display": "ואדם",
+      "pointed": "וְאָדָ֣ם",
+      "ipa": "wə.ʔɔ.ðɔm",
+      "roman": "wəʾåˈḏåm",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "wə",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʔɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ðɔm",
+          "stressed": true,
+          "weight": 1.35
+        }
+      ],
+      "markId": null,
+      "disjunctive": false
+    },
+    {
+      "index": 17,
+      "display": "אין",
+      "pointed": "אַ֔יִן",
+      "ipa": "ʔa.jin",
+      "roman": "ˈʾayin",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔa",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "jin",
+          "stressed": false,
+          "weight": 1.6
+        }
+      ],
+      "markId": "zaqef-qatan",
+      "disjunctive": true
+    },
+    {
+      "index": 18,
+      "display": "לעבד",
+      "pointed": "לַֽעֲבֹ֖ד",
+      "ipa": "la.ʕa.vøð",
+      "roman": "laʿaˈvöḏ",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "la",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 1,
+          "ipa": "ʕa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "vøð",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "tipeha",
+      "disjunctive": true
+    },
+    {
+      "index": 19,
+      "display": "את האדמה",
+      "pointed": "אֶת־הָֽאֲדָמָֽה׃",
+      "ipa": "ʔaθ hɔ.ʔa.ðɔ.mɔ",
+      "roman": "ˈʾaṯ-håʾaḏåˈmå",
+      "syllables": [
+        {
+          "index": 0,
+          "ipa": "ʔaθ",
+          "stressed": true,
+          "weight": 1.35
+        },
+        {
+          "index": 1,
+          "ipa": "hɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 2,
+          "ipa": "ʔa",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 3,
+          "ipa": "ðɔ",
+          "stressed": false,
+          "weight": 1
+        },
+        {
+          "index": 4,
+          "ipa": "mɔ",
+          "stressed": true,
+          "weight": 1.6
+        }
+      ],
+      "markId": "sof-pasuq",
+      "disjunctive": true
+    }
+  ]
+}
